@@ -44,11 +44,11 @@ const testimonials = [
 
 const gallery = [
   "https://images.unsplash.com/photo-1502680390469-be75c86b636f?w=600&q=80&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1505459668311-8dfac7952bf0?w=600&q=80&auto=format&fit=crop",
+  "https://images.pexels.com/photos/1654696/pexels-photo-1654696.jpeg?auto=compress&cs=tinysrgb&w=600",
   "https://images.unsplash.com/photo-1509914398892-963f53e6e2f1?w=600&q=80&auto=format&fit=crop",
   "https://images.unsplash.com/photo-1536768139911-e290a59011e4?w=600&q=80&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1506953823976-52e1fdc0149a?w=600&q=80&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80&auto=format&fit=crop",
+  "https://images.pexels.com/photos/3338597/pexels-photo-3338597.jpeg?auto=compress&cs=tinysrgb&w=600",
+  "https://images.pexels.com/photos/416528/pexels-photo-416528.jpeg?auto=compress&cs=tinysrgb&w=600",
 ]
 
 export default function SurfPage() {
