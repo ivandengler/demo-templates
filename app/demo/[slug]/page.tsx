@@ -168,7 +168,7 @@ export default async function DemoPage({
       <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b border-white/10" style={{ backgroundColor: cp }}>
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <span className="text-white font-bold text-lg tracking-tight">{n.nombre}</span>
-          <div className="hidden md:flex gap-6 text-sm text-white/80">
+          <div className="hidden md:flex items-center gap-6 text-sm text-white/80">
             {n.rubro === 'restaurant' && <><a href="#servicios" className="hover:text-white">Menú</a><a href="#contacto" className="hover:text-white">Contacto</a></>}
             {n.rubro === 'hair_salon' && <><a href="#servicios" className="hover:text-white">Servicios</a><a href="#contacto" className="hover:text-white">Turnos</a></>}
             {n.rubro === 'gym' && <><a href="#servicios" className="hover:text-white">Clases</a><a href="#contacto" className="hover:text-white">Membresías</a></>}
