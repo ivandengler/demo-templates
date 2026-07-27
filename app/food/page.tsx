@@ -3,7 +3,6 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ShoppingCart, X, Plus, Minus, ChevronRight, Globe, MessageCircle, Star } from 'lucide-react'
-import Link from 'next/link'
 
 type Category = 'Todos' | 'Entradas' | 'Principales' | 'Postres' | 'Bebidas'
 
@@ -22,7 +21,7 @@ const products: Product[] = [
   { id: 2, name: "Tartare de salmón", desc: "Salmón fresco, aguacate, alcaparras, limón y chips de wonton", price: 2200, category: "Entradas", img: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&q=80&auto=format&fit=crop" },
   { id: 3, name: "Tabla de charcutería", desc: "Selección de fiambres artesanales, quesos madurados, frutos secos y mermeladas", price: 2800, category: "Entradas", img: "https://images.unsplash.com/photo-1563245372-f21724e3856d?w=400&q=80&auto=format&fit=crop" },
   { id: 4, name: "Risotto al nero di seppia", desc: "Arroz arborio, tinta de calamar, langostinos salteados, parmesano y limón", price: 3400, category: "Principales", img: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&q=80&auto=format&fit=crop", badge: "Chef's choice" },
-  { id: 5, name: "Lomo Wellington", desc: "Lomo al punto, duxelles de hongos, masa hojaldrada, salsa de vino tinto", price: 4200, category: "Principales", img: "https://images.unsplash.com/photo-1544025162-d76538016f28?w=400&q=80&auto=format&fit=crop", badge: "Signature" },
+  { id: 5, name: "Lomo Wellington", desc: "Lomo al punto, duxelles de hongos, masa hojaldrada, salsa de vino tinto", price: 4200, category: "Principales", img: "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=400&q=80&auto=format&fit=crop", badge: "Signature" },
   { id: 6, name: "Pasta all'amatriciana", desc: "Pasta artesanal, guanciale crujiente, tomate San Marzano, pecorino romano", price: 2900, category: "Principales", img: "https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=400&q=80&auto=format&fit=crop" },
   { id: 7, name: "Pollo a las hierbas provenzales", desc: "Muslo de pollo confitado, vegetales de temporada, salsa de mostaza Dijon", price: 2600, category: "Principales", img: "https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?w=400&q=80&auto=format&fit=crop" },
   { id: 8, name: "Tarta tatin de manzana", desc: "Manzanas caramelizadas, masa brisa, crema fraîche y caramelo salado", price: 1400, category: "Postres", img: "https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?w=400&q=80&auto=format&fit=crop" },
@@ -215,7 +214,7 @@ export default function FoodPage() {
             className="grid grid-cols-2 gap-3"
           >
             {[
-              "https://images.unsplash.com/photo-1540189549336-e6e99e86fdb7?w=400&q=80&auto=format&fit=crop",
+              "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400&q=80&auto=format&fit=crop",
               "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=400&q=80&auto=format&fit=crop",
               "https://images.unsplash.com/photo-1551218808-94e220e084d2?w=400&q=80&auto=format&fit=crop",
               "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&q=80&auto=format&fit=crop",
@@ -322,11 +321,6 @@ export default function FoodPage() {
         )}
       </AnimatePresence>
 
-      <div className="fixed bottom-4 right-4 z-30">
-        <Link href="/" className="bg-zinc-900/80 backdrop-blur text-white/60 text-xs px-3 py-2 rounded-full hover:text-white transition-colors border border-white/10">
-          ← Ver todos los demos
-        </Link>
-      </div>
     </div>
   )
 }

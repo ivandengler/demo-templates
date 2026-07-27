@@ -3,7 +3,6 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Waves, Sun, Wind, Users, Star, ChevronDown, Phone, Mail, Globe, MessageCircle } from 'lucide-react'
-import Link from 'next/link'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -45,11 +44,11 @@ const testimonials = [
 
 const gallery = [
   "https://images.unsplash.com/photo-1502680390469-be75c86b636f?w=600&q=80&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1476673631318-e8b0a4afe76b?w=600&q=80&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1505459668311-8dfac7952bf0?w=600&q=80&auto=format&fit=crop",
   "https://images.unsplash.com/photo-1509914398892-963f53e6e2f1?w=600&q=80&auto=format&fit=crop",
   "https://images.unsplash.com/photo-1536768139911-e290a59011e4?w=600&q=80&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1520209623738-d3f2e5e94b28?w=600&q=80&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1455264745730-dc28025a4b50?w=600&q=80&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1506953823976-52e1fdc0149a?w=600&q=80&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80&auto=format&fit=crop",
 ]
 
 export default function SurfPage() {
@@ -416,11 +415,6 @@ export default function SurfPage() {
         </div>
       </footer>
 
-      <div className="fixed bottom-4 right-4">
-        <Link href="/" className="bg-zinc-900/80 backdrop-blur text-white/60 text-xs px-3 py-2 rounded-full hover:text-white transition-colors border border-white/10">
-          ← Ver todos los demos
-        </Link>
-      </div>
     </div>
   )
 }
