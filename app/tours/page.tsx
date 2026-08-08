@@ -719,13 +719,6 @@ export default function ToursPage() {
 
         <div className="relative text-center px-4 max-w-3xl mx-auto pt-24">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-            <span
-              className="inline-flex items-center gap-2 text-sm font-semibold px-4 py-1.5 rounded-full mb-6"
-              style={{ background: 'rgba(232,134,42,0.15)', border: '1px solid rgba(232,134,42,0.4)', color: '#E8862A' }}
-            >
-              <Compass size={14} />
-              {t.hero.badge}
-            </span>
             <h1 className="text-5xl md:text-7xl font-black leading-none mb-6 tracking-tight text-white drop-shadow-lg">
               {t.hero.title1}<br />
               <span style={{ color: '#F5C87A' }}>{t.hero.title2}</span>
