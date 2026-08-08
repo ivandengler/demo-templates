@@ -106,7 +106,7 @@ const tours = [
       es: ['Contacto ético con elefantes rescatados', 'Alimentarlos y bañarlos en el río', 'Almuerzo tailandés tradicional incluido', 'Máximo 10 personas por grupo'],
     },
     images: [
-      'https://images.unsplash.com/photo-1548767797-d8c844163c4a?w=800&q=85&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1474511320723-9a56873867b5?w=800&q=85&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1564760055775-d63b17a55c44?w=800&q=85&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1516426122078-c23e76319801?w=800&q=85&auto=format&fit=crop',
     ],
@@ -266,7 +266,7 @@ export default function ToursPage() {
   const [activeImg, setActiveImg] = useState(0)
   const [selectedDate, setSelectedDate] = useState<string | null>(null)
   const [pax, setPax] = useState(2)
-  const [reservaStep, setReservaStep] = useState<'browse' | 'form' | 'done'>('browse')
+  const [reservaStep, setReservaStep] = useState<'browse' | 'form' | 'payment' | 'done'>('browse')
   const [navScrolled, setNavScrolled] = useState(false)
   const t = i18n[lang]
 
@@ -292,7 +292,7 @@ export default function ToursPage() {
 
   function handleFormSubmit(e: React.FormEvent) {
     e.preventDefault()
-    setReservaStep('done')
+    setReservaStep('payment')
   }
 
   const diffLabel = (d: string) => d === 'easy' ? t.tours.easy : t.tours.moderate
@@ -399,7 +399,19 @@ export default function ToursPage() {
               {t.hero.title1}<br />
               <span style={{ color: '#F5C87A' }}>{t.hero.title2}</span>
             </h1>
-            <p className="text-xl text-stone-200 mb-10 leading-relaxed max-w-xl mx-auto">{t.hero.sub}</p>
+            <p className="text-xl text-stone-200 mb-6 leading-relaxed max-w-xl mx-auto">{t.hero.sub}</p>
+            <div className="flex items-center justify-center gap-3 mb-10">
+              <div className="flex items-center gap-1">
+                {[...Array(5)].map((_, i) => (
+                  <svg key={i} width="20" height="20" viewBox="0 0 24 24" fill="#00B67A"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                ))}
+              </div>
+              <span className="text-white font-bold text-sm">5.0 Excellent</span>
+              <span className="text-white/60 text-sm">·</span>
+              <svg width="80" height="18" viewBox="0 0 130 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <text x="0" y="22" fontFamily="Arial, sans-serif" fontWeight="bold" fontSize="18" fill="white">Trustpilot</text>
+              </svg>
+            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="#tours"
@@ -540,7 +552,7 @@ export default function ToursPage() {
           <div className="grid grid-cols-2 gap-4">
             <img src="https://images.unsplash.com/photo-1528181304800-259b08848526?w=500&q=85&auto=format&fit=crop" alt="" className="rounded-2xl h-52 w-full object-cover" />
             <img src="https://images.unsplash.com/photo-1563492065599-3520f775eeed?w=500&q=85&auto=format&fit=crop" alt="" className="rounded-2xl h-52 w-full object-cover mt-8" />
-            <img src="https://images.unsplash.com/photo-1548767797-d8c844163c4a?w=500&q=85&auto=format&fit=crop" alt="" className="rounded-2xl h-52 w-full object-cover -mt-4" />
+            <img src="https://images.unsplash.com/photo-1474511320723-9a56873867b5?w=500&q=85&auto=format&fit=crop" alt="" className="rounded-2xl h-52 w-full object-cover -mt-4" />
             <img src="https://images.unsplash.com/photo-1559314809-0d155014e29e?w=500&q=85&auto=format&fit=crop" alt="" className="rounded-2xl h-52 w-full object-cover mt-4" />
           </div>
         </div>
@@ -678,6 +690,47 @@ export default function ToursPage() {
                     {selectedDate && <p style={{ color: '#7A4E2A' }} className="mb-6">{t.done.date} <strong style={{ color: '#1A1208' }}>{formatDate(selectedDate, lang)}</strong></p>}
                     <p style={{ color: '#7A4E2A' }} className="mb-8 text-sm">{t.done.body}</p>
                     <button onClick={closeTour} className="font-bold px-8 py-3 rounded-full text-white" style={{ background: '#E8862A' }}>{t.done.close}</button>
+                  </div>
+                ) : reservaStep === 'payment' ? (
+                  <div>
+                    <button onClick={() => setReservaStep('form')} className="flex items-center gap-1 text-sm mb-5 transition-colors hover:opacity-70" style={{ color: '#E8862A' }}>
+                      <ChevronLeft size={15} /> {t.modal.back}
+                    </button>
+                    <h3 className="text-xl font-black mb-1" style={{ color: '#1A1208' }}>{lang === 'en' ? 'Complete your payment' : 'Completá tu pago'}</h3>
+                    <p className="text-sm mb-6" style={{ color: '#7A4E2A' }}>
+                      {selectedTour?.name[lang]} · {selectedDate && formatDate(selectedDate, lang)} · {pax} {lang === 'en' ? `person${pax > 1 ? 's' : ''}` : `persona${pax > 1 ? 's' : ''}`}
+                    </p>
+                    <div className="rounded-xl p-4 mb-6 flex items-center justify-between" style={{ background: 'rgba(232,134,42,0.08)', border: '1px solid rgba(232,134,42,0.2)' }}>
+                      <span className="font-medium" style={{ color: '#5C3A1A' }}>{lang === 'en' ? 'Total to pay' : 'Total a pagar'}</span>
+                      <span className="text-2xl font-black" style={{ color: '#E8862A' }}>{selectedTour && formatPrice(selectedTour.price * pax, selectedTour.currency)}</span>
+                    </div>
+                    <div className="space-y-3 mb-6">
+                      <div>
+                        <label className="text-xs font-semibold mb-1.5 block uppercase tracking-wide" style={{ color: '#7A4E2A' }}>{lang === 'en' ? 'Card number' : 'Número de tarjeta'}</label>
+                        <input className="w-full rounded-xl px-4 py-3 text-sm outline-none font-mono" style={{ background: '#fff', border: '1px solid rgba(232,134,42,0.3)', color: '#1A1208' }} placeholder="4242 4242 4242 4242" maxLength={19} />
+                      </div>
+                      <div className="grid grid-cols-2 gap-3">
+                        <div>
+                          <label className="text-xs font-semibold mb-1.5 block uppercase tracking-wide" style={{ color: '#7A4E2A' }}>{lang === 'en' ? 'Expiry' : 'Vencimiento'}</label>
+                          <input className="w-full rounded-xl px-4 py-3 text-sm outline-none font-mono" style={{ background: '#fff', border: '1px solid rgba(232,134,42,0.3)', color: '#1A1208' }} placeholder="MM / YY" maxLength={7} />
+                        </div>
+                        <div>
+                          <label className="text-xs font-semibold mb-1.5 block uppercase tracking-wide" style={{ color: '#7A4E2A' }}>CVC</label>
+                          <input className="w-full rounded-xl px-4 py-3 text-sm outline-none font-mono" style={{ background: '#fff', border: '1px solid rgba(232,134,42,0.3)', color: '#1A1208' }} placeholder="···" maxLength={4} />
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      onClick={() => setReservaStep('done')}
+                      className="w-full font-bold py-4 rounded-xl text-white text-base transition-all hover:opacity-90"
+                      style={{ background: '#E8862A', boxShadow: '0 4px 20px rgba(232,134,42,0.3)' }}
+                    >
+                      {lang === 'en' ? `Pay ${selectedTour ? formatPrice(selectedTour.price * pax, selectedTour.currency) : ''}` : `Pagar ${selectedTour ? formatPrice(selectedTour.price * pax, selectedTour.currency) : ''}`}
+                    </button>
+                    <div className="flex items-center justify-center gap-2 mt-4">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#A06030" strokeWidth="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                      <p className="text-xs text-center" style={{ color: '#A06030' }}>{lang === 'en' ? 'Secure payment · SSL encrypted' : 'Pago seguro · Cifrado SSL'}</p>
+                    </div>
                   </div>
                 ) : reservaStep === 'form' ? (
                   <div>
