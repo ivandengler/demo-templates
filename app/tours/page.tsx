@@ -17,7 +17,7 @@ const i18n = {
     stats: [{ n: '+800', label: 'Happy travellers' }, { n: '8', label: 'Curated tours' }, { n: '10 yrs', label: 'Of experience' }, { n: '4.9 ★', label: 'Average rating' }],
     tours: { title: 'Our tours', sub: 'Scheduled departures year-round. Max 12 people per group.', difficulty: 'Difficulty', includes: 'Included', pickDate: 'Choose your date', spots: 'spots', fewSpots: 'Only {n} left!', from: 'from', perPerson: 'per person', nextDates: 'Next departures:', details: 'See details', easy: 'Easy', moderate: 'Moderate', chooseTour: 'Choose a tour...', notSure: "I'm not sure yet" },
     modal: { people: 'Number of people', total: 'Total', reserve: 'Book this tour', selectFirst: 'Select a date to continue', back: 'Back' },
-    form: { name: 'Full name', whatsapp: 'WhatsApp / Phone', email: 'Email', dest: 'Which tour interests you?', msg: 'Message (optional)', msgPlaceholder: 'Any questions or special needs?', submit: 'Send enquiry', namePh: 'Your name', emailPh: 'you@email.com' },
+    form: { name: 'Full name', whatsapp: 'WhatsApp / Phone', email: 'Email', dest: 'Which tour interests you?', msg: 'Message (optional)', msgPlaceholder: 'Any questions or special needs?', submit: 'Send enquiry', payNow: 'Pay now', namePh: 'Your name', emailPh: 'you@email.com', phonePh: '81 000 0000' },
     payment: { title: 'Complete your payment', total: 'Total to pay', cardNumber: 'Card number', expiry: 'Expiry', secure: 'Secure payment · SSL encrypted', pay: 'Pay', persons: (n: number) => `${n} person${n > 1 ? 's' : ''}` },
     done: { title: 'Booking sent!', tour: 'Tour:', date: 'Date:', body: 'We will contact you via WhatsApp within 2 hours to confirm your spot.', close: 'Close' },
     why: { title: 'Why travel with us', sub: "We're not a mass-market agency. We're a team of passionate guides who craft every itinerary as if we were going ourselves.", items: [{ title: 'Small groups always', desc: 'Max 12 people. More attention, less noise, better experience.' }, { title: 'Certified local guides', desc: 'All our guides are licensed and have years in the field.' }, { title: 'Unmissable moments', desc: 'We arrive early, stay later. The best shots are from our tours.' }, { title: 'Transparent pricing', desc: 'The price includes everything we say. No hidden fees, ever.' }] },
@@ -31,7 +31,7 @@ const i18n = {
     stats: [{ n: '+800', label: 'Viajeros felices' }, { n: '8', label: 'Tours únicos' }, { n: '10 años', label: 'De experiencia' }, { n: '4.9 ★', label: 'Calificación promedio' }],
     tours: { title: 'Nuestros tours', sub: 'Salidas programadas todo el año. Máximo 12 personas por grupo.', difficulty: 'Dificultad', includes: 'Incluye', pickDate: 'Elegí tu fecha', spots: 'lugares', fewSpots: '¡Solo {n} lugares!', from: 'desde', perPerson: 'por persona', nextDates: 'Próximas salidas:', details: 'Ver detalles', easy: 'Fácil', moderate: 'Moderado', chooseTour: 'Elegir tour...', notSure: 'No sé todavía' },
     modal: { people: 'Cantidad de personas', total: 'Total', reserve: 'Reservar este tour', selectFirst: 'Elegí una fecha para continuar', back: 'Volver' },
-    form: { name: 'Nombre y apellido', whatsapp: 'WhatsApp / Teléfono', email: 'Email', dest: '¿Qué tour te interesa?', msg: 'Mensaje (opcional)', msgPlaceholder: '¿Alguna pregunta o necesidad especial?', submit: 'Enviar consulta', namePh: 'Tu nombre', emailPh: 'tu@email.com' },
+    form: { name: 'Nombre y apellido', whatsapp: 'WhatsApp / Teléfono', email: 'Email', dest: '¿Qué tour te interesa?', msg: 'Mensaje (opcional)', msgPlaceholder: '¿Alguna pregunta o necesidad especial?', submit: 'Enviar consulta', payNow: 'Pagar ahora', namePh: 'Tu nombre', emailPh: 'tu@email.com', phonePh: '81 000 0000' },
     payment: { title: 'Completá tu pago', total: 'Total a pagar', cardNumber: 'Número de tarjeta', expiry: 'Vencimiento', secure: 'Pago seguro · Cifrado SSL', pay: 'Pagar', persons: (n: number) => `${n} persona${n > 1 ? 's' : ''}` },
     done: { title: '¡Reserva enviada!', tour: 'Tour:', date: 'Fecha:', body: 'Te contactamos por WhatsApp en menos de 2 horas para confirmar tu lugar.', close: 'Cerrar' },
     why: { title: 'Por qué viajar con nosotros', sub: 'No somos una agencia masiva. Somos un equipo apasionado que arma cada viaje con el mismo cuidado con el que lo haríamos para nosotros.', items: [{ title: 'Grupos pequeños siempre', desc: 'Máximo 12 personas. Más atención, menos ruido, mejor experiencia.' }, { title: 'Guías locales certificados', desc: 'Todos nuestros guías tienen licencia y años de experiencia en el terreno.' }, { title: 'Momentos únicos', desc: 'Llegamos temprano, nos quedamos más. Las mejores fotos son de nuestros tours.' }, { title: 'Precios transparentes', desc: 'El precio incluye todo lo que decimos. Sin costos ocultos.' }] },
@@ -45,7 +45,7 @@ const i18n = {
     stats: [{ n: '+800', label: 'Zufriedene Reisende' }, { n: '8', label: 'Kuratierte Touren' }, { n: '10 J.', label: 'Erfahrung' }, { n: '4.9 ★', label: 'Durchschnittsbewertung' }],
     tours: { title: 'Unsere Touren', sub: 'Ganzjährige Abfahrten. Max. 12 Personen pro Gruppe.', difficulty: 'Schwierigkeit', includes: 'Inklusive', pickDate: 'Datum wählen', spots: 'Plätze', fewSpots: 'Nur noch {n}!', from: 'ab', perPerson: 'pro Person', nextDates: 'Nächste Abfahrten:', details: 'Details', easy: 'Einfach', moderate: 'Mittel', chooseTour: 'Tour wählen...', notSure: 'Ich bin noch unsicher' },
     modal: { people: 'Personenanzahl', total: 'Gesamt', reserve: 'Tour buchen', selectFirst: 'Datum wählen um fortzufahren', back: 'Zurück' },
-    form: { name: 'Vollständiger Name', whatsapp: 'WhatsApp / Telefon', email: 'E-Mail', dest: 'Welche Tour interessiert Sie?', msg: 'Nachricht (optional)', msgPlaceholder: 'Fragen oder besondere Wünsche?', submit: 'Anfrage senden', namePh: 'Ihr Name', emailPh: 'sie@email.de' },
+    form: { name: 'Vollständiger Name', whatsapp: 'WhatsApp / Telefon', email: 'E-Mail', dest: 'Welche Tour interessiert Sie?', msg: 'Nachricht (optional)', msgPlaceholder: 'Fragen oder besondere Wünsche?', submit: 'Anfrage senden', payNow: 'Jetzt bezahlen', namePh: 'Ihr Name', emailPh: 'sie@email.de', phonePh: '81 000 0000' },
     payment: { title: 'Zahlung abschließen', total: 'Zu zahlender Betrag', cardNumber: 'Kartennummer', expiry: 'Ablaufdatum', secure: 'Sichere Zahlung · SSL-verschlüsselt', pay: 'Bezahlen', persons: (n: number) => `${n} Person${n > 1 ? 'en' : ''}` },
     done: { title: 'Buchung gesendet!', tour: 'Tour:', date: 'Datum:', body: 'Wir melden uns innerhalb von 2 Stunden via WhatsApp, um Ihren Platz zu bestätigen.', close: 'Schließen' },
     why: { title: 'Warum mit uns reisen', sub: 'Wir sind keine Massentourismusagentur. Wir sind ein leidenschaftliches Team, das jede Reiseroute so sorgfältig plant, als würden wir selbst mitfahren.', items: [{ title: 'Immer kleine Gruppen', desc: 'Max. 12 Personen. Mehr Aufmerksamkeit, weniger Lärm, besseres Erlebnis.' }, { title: 'Zertifizierte lokale Guides', desc: 'Alle unsere Guides sind lizenziert und haben jahrelange Felderfahrung.' }, { title: 'Unvergessliche Momente', desc: 'Wir kommen früh, bleiben länger. Die besten Fotos entstehen bei unseren Touren.' }, { title: 'Transparente Preise', desc: 'Der Preis beinhaltet alles, was wir versprechen. Keine versteckten Kosten.' }] },
@@ -59,7 +59,7 @@ const i18n = {
     stats: [{ n: '+800', label: 'Viajantes felizes' }, { n: '8', label: 'Tours selecionados' }, { n: '10 anos', label: 'De experiência' }, { n: '4.9 ★', label: 'Avaliação média' }],
     tours: { title: 'Nossos tours', sub: 'Partidas programadas o ano todo. Máx. 12 pessoas por grupo.', difficulty: 'Dificuldade', includes: 'Incluído', pickDate: 'Escolha sua data', spots: 'vagas', fewSpots: 'Só {n} restantes!', from: 'a partir de', perPerson: 'por pessoa', nextDates: 'Próximas partidas:', details: 'Ver detalhes', easy: 'Fácil', moderate: 'Moderado', chooseTour: 'Escolha um tour...', notSure: 'Ainda não sei' },
     modal: { people: 'Número de pessoas', total: 'Total', reserve: 'Reservar este tour', selectFirst: 'Selecione uma data para continuar', back: 'Voltar' },
-    form: { name: 'Nome completo', whatsapp: 'WhatsApp / Telefone', email: 'E-mail', dest: 'Qual tour te interessa?', msg: 'Mensagem (opcional)', msgPlaceholder: 'Alguma dúvida ou necessidade especial?', submit: 'Enviar consulta', namePh: 'Seu nome', emailPh: 'voce@email.com' },
+    form: { name: 'Nome completo', whatsapp: 'WhatsApp / Telefone', email: 'E-mail', dest: 'Qual tour te interessa?', msg: 'Mensagem (opcional)', msgPlaceholder: 'Alguma dúvida ou necessidade especial?', submit: 'Enviar consulta', payNow: 'Pagar agora', namePh: 'Seu nome', emailPh: 'voce@email.com', phonePh: '81 000 0000' },
     payment: { title: 'Conclua seu pagamento', total: 'Total a pagar', cardNumber: 'Número do cartão', expiry: 'Validade', secure: 'Pagamento seguro · Criptografia SSL', pay: 'Pagar', persons: (n: number) => `${n} pessoa${n > 1 ? 's' : ''}` },
     done: { title: 'Reserva enviada!', tour: 'Tour:', date: 'Data:', body: 'Entraremos em contato pelo WhatsApp em até 2 horas para confirmar seu lugar.', close: 'Fechar' },
     why: { title: 'Por que viajar conosco', sub: 'Não somos uma agência de massa. Somos uma equipe apaixonada que elabora cada roteiro como se fôssemos nós mesmos viajar.', items: [{ title: 'Grupos pequenos sempre', desc: 'Máx. 12 pessoas. Mais atenção, menos barulho, melhor experiência.' }, { title: 'Guias locais certificados', desc: 'Todos os nossos guias são licenciados e têm anos de experiência.' }, { title: 'Momentos inesquecíveis', desc: 'Chegamos cedo, ficamos mais. As melhores fotos são dos nossos tours.' }, { title: 'Preços transparentes', desc: 'O preço inclui tudo que prometemos. Sem taxas ocultas.' }] },
@@ -73,7 +73,7 @@ const i18n = {
     stats: [{ n: '+800', label: 'Viaggiatori soddisfatti' }, { n: '8', label: 'Tour selezionati' }, { n: '10 anni', label: 'Di esperienza' }, { n: '4.9 ★', label: 'Valutazione media' }],
     tours: { title: 'I nostri tour', sub: "Partenze programmate tutto l'anno. Max 12 persone per gruppo.", difficulty: 'Difficoltà', includes: 'Incluso', pickDate: 'Scegli la tua data', spots: 'posti', fewSpots: 'Solo {n} rimasti!', from: 'da', perPerson: 'a persona', nextDates: 'Prossime partenze:', details: 'Vedi dettagli', easy: 'Facile', moderate: 'Moderato', chooseTour: 'Scegli un tour...', notSure: 'Non sono ancora sicuro' },
     modal: { people: 'Numero di persone', total: 'Totale', reserve: 'Prenota questo tour', selectFirst: 'Seleziona una data per continuare', back: 'Indietro' },
-    form: { name: 'Nome completo', whatsapp: 'WhatsApp / Telefono', email: 'Email', dest: 'Quale tour ti interessa?', msg: 'Messaggio (opzionale)', msgPlaceholder: 'Domande o esigenze speciali?', submit: 'Invia richiesta', namePh: 'Il tuo nome', emailPh: 'tu@email.it' },
+    form: { name: 'Nome completo', whatsapp: 'WhatsApp / Telefono', email: 'Email', dest: 'Quale tour ti interessa?', msg: 'Messaggio (opzionale)', msgPlaceholder: 'Domande o esigenze speciali?', submit: 'Invia richiesta', payNow: 'Paga ora', namePh: 'Il tuo nome', emailPh: 'tu@email.it', phonePh: '81 000 0000' },
     payment: { title: 'Completa il pagamento', total: 'Totale da pagare', cardNumber: 'Numero di carta', expiry: 'Scadenza', secure: 'Pagamento sicuro · Crittografia SSL', pay: 'Paga', persons: (n: number) => `${n} persona${n > 1 ? 'e' : ''}` },
     done: { title: 'Prenotazione inviata!', tour: 'Tour:', date: 'Data:', body: 'Ti contatteremo via WhatsApp entro 2 ore per confermare il tuo posto.', close: 'Chiudi' },
     why: { title: 'Perché viaggiare con noi', sub: "Non siamo un'agenzia di massa. Siamo un team appassionato che crea ogni itinerario come se lo facessimo per noi stessi.", items: [{ title: 'Sempre gruppi piccoli', desc: 'Max 12 persone. Più attenzione, meno caos, esperienza migliore.' }, { title: 'Guide locali certificate', desc: 'Tutte le nostre guide sono autorizzate e hanno anni di esperienza sul campo.' }, { title: 'Momenti imperdibili', desc: 'Arriviamo presto, restiamo di più. Le foto migliori vengono dai nostri tour.' }, { title: 'Prezzi trasparenti', desc: 'Il prezzo include tutto ciò che diciamo. Nessun costo nascosto.' }] },
@@ -87,7 +87,7 @@ const i18n = {
     stats: [{ n: '+800', label: 'Довольных путешественников' }, { n: '8', label: 'Уникальных туров' }, { n: '10 лет', label: 'Опыта' }, { n: '4.9 ★', label: 'Средняя оценка' }],
     tours: { title: 'Наши туры', sub: 'Плановые отправления круглый год. Макс. 12 человек в группе.', difficulty: 'Сложность', includes: 'Включено', pickDate: 'Выберите дату', spots: 'мест', fewSpots: 'Осталось только {n}!', from: 'от', perPerson: 'с человека', nextDates: 'Ближайшие даты:', details: 'Подробнее', easy: 'Лёгкий', moderate: 'Средний', chooseTour: 'Выберите тур...', notSure: 'Ещё не знаю' },
     modal: { people: 'Количество человек', total: 'Итого', reserve: 'Забронировать тур', selectFirst: 'Выберите дату для продолжения', back: 'Назад' },
-    form: { name: 'Полное имя', whatsapp: 'WhatsApp / Телефон', email: 'Эл. почта', dest: 'Какой тур вас интересует?', msg: 'Сообщение (необязательно)', msgPlaceholder: 'Вопросы или особые пожелания?', submit: 'Отправить запрос', namePh: 'Ваше имя', emailPh: 'vy@email.com' },
+    form: { name: 'Полное имя', whatsapp: 'WhatsApp / Телефон', email: 'Эл. почта', dest: 'Какой тур вас интересует?', msg: 'Сообщение (необязательно)', msgPlaceholder: 'Вопросы или особые пожелания?', submit: 'Отправить запрос', payNow: 'Оплатить', namePh: 'Ваше имя', emailPh: 'vy@email.com', phonePh: '81 000 0000' },
     payment: { title: 'Завершите оплату', total: 'Сумма к оплате', cardNumber: 'Номер карты', expiry: 'Срок действия', secure: 'Безопасная оплата · SSL-шифрование', pay: 'Оплатить', persons: (n: number) => `${n} чел.` },
     done: { title: 'Reserva enviada!', tour: 'Тур:', date: 'Дата:', body: 'Мы свяжемся с вами через WhatsApp в течение 2 часов для подтверждения места.', close: 'Закрыть' },
     why: { title: 'Почему выбирают нас', sub: 'Мы не массовое агентство. Мы команда увлечённых гидов, которые создают каждый маршрут так, будто едут сами.', items: [{ title: 'Только малые группы', desc: 'Макс. 12 человек. Больше внимания, меньше суеты, лучше впечатления.' }, { title: 'Сертифицированные местные гиды', desc: 'Все наши гиды лицензированы и имеют многолетний опыт работы.' }, { title: 'Незабываемые моменты', desc: 'Мы приезжаем раньше, уходим позже. Лучшие фото — с наших туров.' }, { title: 'Прозрачные цены', desc: 'Цена включает всё, что мы обещаем. Никаких скрытых платежей.' }] },
@@ -101,7 +101,7 @@ const i18n = {
     stats: [{ n: '+800', label: '满意旅客' }, { n: '8', label: '精选行程' }, { n: '10年', label: '丰富经验' }, { n: '4.9 ★', label: '平均评分' }],
     tours: { title: '我们的行程', sub: '全年定期出发。每组最多12人。', difficulty: '难度', includes: '包含', pickDate: '选择日期', spots: '名额', fewSpots: '仅剩{n}个名额！', from: '起价', perPerson: '每人', nextDates: '近期出发:', details: '查看详情', easy: '轻松', moderate: '中等', chooseTour: '选择行程...', notSure: '还不确定' },
     modal: { people: '人数', total: '总计', reserve: '预订此行程', selectFirst: '请先选择日期', back: '返回' },
-    form: { name: '姓名', whatsapp: 'WhatsApp / 电话', email: '电子邮件', dest: '您对哪个行程感兴趣?', msg: '留言（可选）', msgPlaceholder: '有任何问题或特殊需求?', submit: '发送咨询', namePh: '您的姓名', emailPh: 'ni@email.com' },
+    form: { name: '姓名', whatsapp: 'WhatsApp / 电话', email: '电子邮件', dest: '您对哪个行程感兴趣?', msg: '留言（可选）', msgPlaceholder: '有任何问题或特殊需求?', submit: '发送咨询', payNow: '立即付款', namePh: '您的姓名', emailPh: 'ni@email.com', phonePh: '81 000 0000' },
     payment: { title: '完成付款', total: '应付总额', cardNumber: '卡号', expiry: '有效期', secure: '安全支付 · SSL加密', pay: '立即支付', persons: (n: number) => `${n}人` },
     done: { title: '预订已发送！', tour: '行程：', date: '日期：', body: '我们将在2小时内通过WhatsApp与您联系以确认名额。', close: '关闭' },
     why: { title: '为什么选择我们', sub: '我们不是大众旅行社。我们是一支充满热情的导游团队，每条路线都像是为自己设计的。', items: [{ title: '始终小团游', desc: '最多12人。更多关注，更少噪音，更好的体验。' }, { title: '持证本地导游', desc: '我们所有导游都持有执照并拥有多年实地经验。' }, { title: '难忘的瞬间', desc: '我们早到晚走。最好的照片来自我们的行程。' }, { title: '透明定价', desc: '价格包含我们承诺的一切。从不收取隐藏费用。' }] },
@@ -115,7 +115,7 @@ const i18n = {
     stats: [{ n: '+800', label: '満足したお客様' }, { n: '8', label: '厳選ツアー' }, { n: '10年', label: '豊富な経験' }, { n: '4.9 ★', label: '平均評価' }],
     tours: { title: '私たちのツアー', sub: '年間を通じて定期出発。1グループ最大12名。', difficulty: '難易度', includes: '含まれるもの', pickDate: '日付を選択', spots: '空き', fewSpots: '残り{n}席！', from: '料金', perPerson: '1名', nextDates: '次回出発:', details: '詳細を見る', easy: '簡単', moderate: '普通', chooseTour: 'ツアーを選択...', notSure: 'まだ決まっていません' },
     modal: { people: '人数', total: '合計', reserve: 'このツアーを予約', selectFirst: '続けるには日付を選択してください', back: '戻る' },
-    form: { name: '氏名', whatsapp: 'WhatsApp / 電話番号', email: 'メールアドレス', dest: 'どのツアーに興味がありますか?', msg: 'メッセージ（任意）', msgPlaceholder: 'ご質問や特別なご要望はありますか?', submit: 'お問い合わせを送る', namePh: 'お名前', emailPh: 'anata@email.com' },
+    form: { name: '氏名', whatsapp: 'WhatsApp / 電話番号', email: 'メールアドレス', dest: 'どのツアーに興味がありますか?', msg: 'メッセージ（任意）', msgPlaceholder: 'ご質問や特別なご要望はありますか?', submit: 'お問い合わせを送る', payNow: '今すぐ支払う', namePh: 'お名前', emailPh: 'anata@email.com', phonePh: '81 000 0000' },
     payment: { title: 'お支払いを完了する', total: 'お支払い合計', cardNumber: 'カード番号', expiry: '有効期限', secure: '安全な支払い · SSL暗号化', pay: '支払う', persons: (n: number) => `${n}名` },
     done: { title: '予約を送信しました！', tour: 'ツアー：', date: '日付：', body: '2時間以内にWhatsAppでご連絡し、お席を確認いたします。', close: '閉じる' },
     why: { title: '私たちと旅する理由', sub: '私たちは大手旅行会社ではありません。情熱的なガイドのチームが、まるで自分たちが旅するかのように一つひとつの旅程を作り上げています。', items: [{ title: '常に少人数グループ', desc: '最大12名。より多くの配慮、より少ない混雑、より良い体験。' }, { title: '認定地元ガイド', desc: '全てのガイドはライセンスを持ち、現場での豊富な経験があります。' }, { title: '忘れられない瞬間', desc: '早く到着し、長く滞在。最高の写真は私たちのツアーから生まれます。' }, { title: '透明な料金', desc: '料金には私たちが約束するすべてが含まれています。隠れた費用は一切ありません。' }] },
@@ -129,7 +129,7 @@ const i18n = {
     stats: [{ n: '+800', label: '만족한 여행자' }, { n: '8', label: '엄선된 투어' }, { n: '10년', label: '풍부한 경험' }, { n: '4.9 ★', label: '평균 평점' }],
     tours: { title: '투어 소개', sub: '연중 정기 출발. 그룹당 최대 12명.', difficulty: '난이도', includes: '포함 사항', pickDate: '날짜 선택', spots: '자리', fewSpots: '{n}자리 남음!', from: '시작가', perPerson: '1인', nextDates: '다음 출발:', details: '자세히 보기', easy: '쉬움', moderate: '보통', chooseTour: '투어 선택...', notSure: '아직 모르겠어요' },
     modal: { people: '인원 수', total: '합계', reserve: '이 투어 예약하기', selectFirst: '계속하려면 날짜를 선택하세요', back: '뒤로' },
-    form: { name: '이름', whatsapp: 'WhatsApp / 전화번호', email: '이메일', dest: '어떤 투어에 관심이 있으신가요?', msg: '메시지 (선택)', msgPlaceholder: '질문이나 특별한 요청이 있으신가요?', submit: '문의 보내기', namePh: '성함', emailPh: 'you@email.com' },
+    form: { name: '이름', whatsapp: 'WhatsApp / 전화번호', email: '이메일', dest: '어떤 투어에 관심이 있으신가요?', msg: '메시지 (선택)', msgPlaceholder: '질문이나 특별한 요청이 있으신가요?', submit: '문의 보내기', payNow: '지금 결제', namePh: '성함', emailPh: 'you@email.com', phonePh: '81 000 0000' },
     payment: { title: '결제를 완료하세요', total: '결제 금액', cardNumber: '카드 번호', expiry: '유효기간', secure: '안전한 결제 · SSL 암호화', pay: '결제하기', persons: (n: number) => `${n}명` },
     done: { title: '예약 신청 완료!', tour: '투어:', date: '날짜:', body: '2시간 이내에 WhatsApp으로 연락하여 자리를 확인해 드리겠습니다.', close: '닫기' },
     why: { title: '왜 우리와 함께 여행하나요', sub: '우리는 대형 여행사가 아닙니다. 마치 직접 여행하는 것처럼 모든 여정을 정성껏 만드는 열정적인 가이드 팀입니다.', items: [{ title: '항상 소규모 그룹', desc: '최대 12명. 더 많은 관심, 더 적은 소음, 더 나은 경험.' }, { title: '공인 현지 가이드', desc: '모든 가이드는 자격증을 보유하고 현장 경험이 풍부합니다.' }, { title: '놓칠 수 없는 순간', desc: '일찍 도착하고 오래 머뭅니다. 최고의 사진은 우리 투어에서 나옵니다.' }, { title: '투명한 가격', desc: '가격에는 약속한 모든 것이 포함됩니다. 숨겨진 비용은 없습니다.' }] },
@@ -143,7 +143,7 @@ const i18n = {
     stats: [{ n: '+800', label: 'นักท่องเที่ยวที่พึงพอใจ' }, { n: '8', label: 'ทัวร์คัดสรร' }, { n: '10 ปี', label: 'ประสบการณ์' }, { n: '4.9 ★', label: 'คะแนนเฉลี่ย' }],
     tours: { title: 'ทัวร์ของเรา', sub: 'ออกเดินทางตลอดปี สูงสุด 12 คนต่อกลุ่ม', difficulty: 'ความยาก', includes: 'รวมอยู่แล้ว', pickDate: 'เลือกวันที่', spots: 'ที่นั่ง', fewSpots: 'เหลือเพียง {n} ที่!', from: 'เริ่มต้น', perPerson: 'ต่อคน', nextDates: 'วันออกเดินทางถัดไป:', details: 'ดูรายละเอียด', easy: 'ง่าย', moderate: 'ปานกลาง', chooseTour: 'เลือกทัวร์...', notSure: 'ยังไม่แน่ใจ' },
     modal: { people: 'จำนวนคน', total: 'รวมทั้งหมด', reserve: 'จองทัวร์นี้', selectFirst: 'กรุณาเลือกวันที่ก่อนดำเนินการต่อ', back: 'กลับ' },
-    form: { name: 'ชื่อ-นามสกุล', whatsapp: 'WhatsApp / โทรศัพท์', email: 'อีเมล', dest: 'คุณสนใจทัวร์ไหน?', msg: 'ข้อความ (ไม่บังคับ)', msgPlaceholder: 'มีคำถามหรือความต้องการพิเศษ?', submit: 'ส่งคำถาม', namePh: 'ชื่อของคุณ', emailPh: 'khun@email.com' },
+    form: { name: 'ชื่อ-นามสกุล', whatsapp: 'WhatsApp / โทรศัพท์', email: 'อีเมล', dest: 'คุณสนใจทัวร์ไหน?', msg: 'ข้อความ (ไม่บังคับ)', msgPlaceholder: 'มีคำถามหรือความต้องการพิเศษ?', submit: 'ส่งคำถาม', payNow: 'ชำระเงินตอนนี้', namePh: 'ชื่อของคุณ', emailPh: 'khun@email.com', phonePh: '81 000 0000' },
     payment: { title: 'ชำระเงิน', total: 'ยอดชำระ', cardNumber: 'หมายเลขบัตร', expiry: 'วันหมดอายุ', secure: 'การชำระเงินที่ปลอดภัย · เข้ารหัส SSL', pay: 'ชำระเงิน', persons: (n: number) => `${n} คน` },
     done: { title: 'ส่งการจองแล้ว!', tour: 'ทัวร์:', date: 'วันที่:', body: 'เราจะติดต่อคุณผ่าน WhatsApp ภายใน 2 ชั่วโมงเพื่อยืนยันที่นั่ง', close: 'ปิด' },
     why: { title: 'ทำไมต้องเดินทางกับเรา', sub: 'เราไม่ใช่บริษัทนำเที่ยวแบบมวลชน เราคือทีมไกด์ที่มีความหลงใหล ที่ออกแบบทุกเส้นทางราวกับว่าเราเองกำลังเดินทาง', items: [{ title: 'กลุ่มเล็กเสมอ', desc: 'สูงสุด 12 คน ใส่ใจมากขึ้น เสียงรบกวนน้อยลง ประสบการณ์ดีขึ้น' }, { title: 'ไกด์ท้องถิ่นที่มีใบรับรอง', desc: 'ไกด์ทุกคนมีใบอนุญาตและมีประสบการณ์ภาคสนามหลายปี' }, { title: 'ช่วงเวลาที่ไม่ควรพลาด', desc: 'เราไปถึงก่อนและอยู่นานขึ้น ภาพถ่ายที่ดีที่สุดมาจากทัวร์ของเรา' }, { title: 'ราคาโปร่งใส', desc: 'ราคารวมทุกอย่างที่เราบอก ไม่มีค่าใช้จ่ายซ่อนเร้น' }] },
@@ -522,6 +522,34 @@ function getLArr(obj: Partial<Record<Lang, string[]>>, lang: Lang): string[] {
   return obj[lang] ?? obj.en ?? []
 }
 
+const PHONE_CODES = [
+  { code: '+66', flag: '🇹🇭', label: 'TH' },
+  { code: '+1',  flag: '🇺🇸', label: 'US/CA' },
+  { code: '+44', flag: '🇬🇧', label: 'UK' },
+  { code: '+61', flag: '🇦🇺', label: 'AU' },
+  { code: '+33', flag: '🇫🇷', label: 'FR' },
+  { code: '+49', flag: '🇩🇪', label: 'DE' },
+  { code: '+34', flag: '🇪🇸', label: 'ES' },
+  { code: '+39', flag: '🇮🇹', label: 'IT' },
+  { code: '+55', flag: '🇧🇷', label: 'BR' },
+  { code: '+7',  flag: '🇷🇺', label: 'RU' },
+  { code: '+86', flag: '🇨🇳', label: 'CN' },
+  { code: '+81', flag: '🇯🇵', label: 'JP' },
+  { code: '+82', flag: '🇰🇷', label: 'KR' },
+  { code: '+852', flag: '🇭🇰', label: 'HK' },
+  { code: '+65', flag: '🇸🇬', label: 'SG' },
+  { code: '+60', flag: '🇲🇾', label: 'MY' },
+  { code: '+62', flag: '🇮🇩', label: 'ID' },
+  { code: '+91', flag: '🇮🇳', label: 'IN' },
+  { code: '+971', flag: '🇦🇪', label: 'AE' },
+  { code: '+972', flag: '🇮🇱', label: 'IL' },
+  { code: '+31', flag: '🇳🇱', label: 'NL' },
+  { code: '+41', flag: '🇨🇭', label: 'CH' },
+  { code: '+46', flag: '🇸🇪', label: 'SE' },
+  { code: '+47', flag: '🇳🇴', label: 'NO' },
+  { code: '+48', flag: '🇵🇱', label: 'PL' },
+]
+
 function formatDate(dateStr: string, lang: Lang) {
   const [y, m, d] = dateStr.split('-').map(Number)
   const date = new Date(y, m - 1, d)
@@ -642,6 +670,7 @@ export default function ToursPage() {
   const [selectedDate, setSelectedDate] = useState<string | null>(null)
   const [pax, setPax] = useState(2)
   const [reservaStep, setReservaStep] = useState<'browse' | 'form' | 'payment' | 'done'>('browse')
+  const [phoneCode, setPhoneCode] = useState('+66')
   const [navScrolled, setNavScrolled] = useState(false)
   const t = i18n[lang]
 
@@ -1085,22 +1114,31 @@ export default function ToursPage() {
                       </p>
                     )}
                     <form onSubmit={handleFormSubmit} className="space-y-4">
-                      {[
-                        { label: t.form.name, ph: t.form.namePh, type: 'text' },
-                        { label: t.form.whatsapp, ph: '+66 81 000 0000', type: 'text' },
-                        { label: t.form.email, ph: t.form.emailPh, type: 'email' },
-                      ].map(f => (
-                        <div key={f.label}>
-                          <label className="text-sm font-medium mb-1.5 block" style={{ color: '#7A4E2A' }}>{f.label}</label>
-                          <input required type={f.type} className="w-full rounded-xl px-4 py-3 text-sm outline-none transition-all" style={{ background: '#fff', border: '1px solid rgba(232,134,42,0.3)', color: '#1A1208' }} placeholder={f.ph} onFocus={e => e.target.style.borderColor = '#E8862A'} onBlur={e => e.target.style.borderColor = 'rgba(232,134,42,0.3)'} />
-                        </div>
-                      ))}
                       <div>
-                        <label className="text-sm font-medium mb-1.5 block" style={{ color: '#7A4E2A' }}>{t.form.msg}</label>
-                        <textarea rows={2} className="w-full rounded-xl px-4 py-3 text-sm outline-none transition-all resize-none" style={{ background: '#fff', border: '1px solid rgba(232,134,42,0.3)', color: '#1A1208' }} placeholder={t.form.msgPlaceholder} onFocus={e => e.target.style.borderColor = '#E8862A'} onBlur={e => e.target.style.borderColor = 'rgba(232,134,42,0.3)'} />
+                        <label className="text-sm font-medium mb-1.5 block" style={{ color: '#7A4E2A' }}>{t.form.name}</label>
+                        <input required type="text" className="w-full rounded-xl px-4 py-3 text-sm outline-none transition-all" style={{ background: '#fff', border: '1px solid rgba(232,134,42,0.3)', color: '#1A1208' }} placeholder={t.form.namePh} onFocus={e => e.target.style.borderColor = '#E8862A'} onBlur={e => e.target.style.borderColor = 'rgba(232,134,42,0.3)'} />
                       </div>
-                      <button type="submit" className="w-full font-bold py-4 rounded-xl text-white" style={{ background: '#E8862A' }}>{t.form.submit}</button>
-                      <p className="text-xs text-center" style={{ color: '#A06030' }}>{t.contact.noPayment}</p>
+                      <div>
+                        <label className="text-sm font-medium mb-1.5 block" style={{ color: '#7A4E2A' }}>{t.form.whatsapp}</label>
+                        <div className="flex gap-2">
+                          <select
+                            value={phoneCode}
+                            onChange={e => setPhoneCode(e.target.value)}
+                            className="rounded-xl px-3 py-3 text-sm outline-none transition-all shrink-0"
+                            style={{ background: '#fff', border: '1px solid rgba(232,134,42,0.3)', color: '#1A1208', minWidth: 90 }}
+                          >
+                            {PHONE_CODES.map(c => (
+                              <option key={c.code} value={c.code}>{c.flag} {c.code}</option>
+                            ))}
+                          </select>
+                          <input required type="tel" className="flex-1 rounded-xl px-4 py-3 text-sm outline-none transition-all" style={{ background: '#fff', border: '1px solid rgba(232,134,42,0.3)', color: '#1A1208' }} placeholder={t.form.phonePh} onFocus={e => e.target.style.borderColor = '#E8862A'} onBlur={e => e.target.style.borderColor = 'rgba(232,134,42,0.3)'} />
+                        </div>
+                      </div>
+                      <div>
+                        <label className="text-sm font-medium mb-1.5 block" style={{ color: '#7A4E2A' }}>{t.form.email}</label>
+                        <input required type="email" className="w-full rounded-xl px-4 py-3 text-sm outline-none transition-all" style={{ background: '#fff', border: '1px solid rgba(232,134,42,0.3)', color: '#1A1208' }} placeholder={t.form.emailPh} onFocus={e => e.target.style.borderColor = '#E8862A'} onBlur={e => e.target.style.borderColor = 'rgba(232,134,42,0.3)'} />
+                      </div>
+                      <button type="submit" className="w-full font-bold py-4 rounded-xl text-white" style={{ background: '#E8862A' }}>{t.form.payNow}</button>
                     </form>
                   </div>
                 ) : (
