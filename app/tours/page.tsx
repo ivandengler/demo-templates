@@ -532,6 +532,50 @@ function formatPrice(p: number, currency: string) {
   return `${currency} ${p.toLocaleString()}`
 }
 
+// ─── Animated stat counter ────────────────────────────────────────────────────
+
+function StatCounter({ n, label }: { n: string; label: string }) {
+  const [displayed, setDisplayed] = useState('0')
+  const ref = useRef<HTMLDivElement>(null)
+  const triggered = useRef(false)
+
+  const match = n.match(/^([^0-9]*)(\d+\.?\d*)(.*)$/)
+  const prefix = match?.[1] ?? ''
+  const target = parseFloat(match?.[2] ?? '0')
+  const suffix = match?.[3] ?? ''
+  const isDecimal = n.includes('.')
+
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting && !triggered.current) {
+        triggered.current = true
+        const duration = 1400
+        const start = performance.now()
+        const tick = (now: number) => {
+          const p = Math.min((now - start) / duration, 1)
+          const eased = 1 - Math.pow(1 - p, 3)
+          const val = target * eased
+          setDisplayed(isDecimal ? val.toFixed(1) : Math.floor(val).toString())
+          if (p < 1) requestAnimationFrame(tick)
+          else setDisplayed(isDecimal ? target.toFixed(1) : target.toString())
+        }
+        requestAnimationFrame(tick)
+      }
+    }, { threshold: 0.5 })
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [target, isDecimal])
+
+  return (
+    <div ref={ref}>
+      <div className="text-3xl font-black">{prefix}{displayed}{suffix}</div>
+      <div className="text-sm font-medium mt-1 opacity-80">{label}</div>
+    </div>
+  )
+}
+
 // ─── Why Section with parallax gallery ───────────────────────────────────────
 
 function WhySection({ t }: { t: typeof i18n['en'] }) {
@@ -752,10 +796,7 @@ export default function ToursPage() {
       <section style={{ background: '#E8862A' }} className="py-10">
         <div className="max-w-4xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">
           {t.stats.map(s => (
-            <div key={s.label}>
-              <div className="text-3xl font-black">{s.n}</div>
-              <div className="text-sm font-medium mt-1 opacity-80">{s.label}</div>
-            </div>
+            <StatCounter key={s.label} n={s.n} label={s.label} />
           ))}
         </div>
       </section>
