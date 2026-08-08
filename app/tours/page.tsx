@@ -615,7 +615,6 @@ function WhySection({ t }: { t: typeof i18n['en'] }) {
   const leftImgs = [
     '/elephant-sanctuary.jpg',
     'https://images.unsplash.com/photo-1528181304800-259b08848526?w=500&q=85&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1559314809-0d155014e29e?w=500&q=85&auto=format&fit=crop',
   ]
   const rightImgs = [
     'https://images.unsplash.com/photo-1563492065599-3520f775eeed?w=500&q=85&auto=format&fit=crop',
