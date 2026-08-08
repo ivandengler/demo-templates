@@ -16,10 +16,10 @@ const i18n = {
     hero: { badge: 'Small-group tours · Chiang Mai, Thailand', title1: 'Discover Chiang Mai', title2: 'like a local', sub: 'Expert guides. Tiny groups. Experiences you will never forget.', btn1: 'Explore tours', btn2: 'How it works' },
     stats: [{ n: '+800', label: 'Happy travellers' }, { n: '8', label: 'Curated tours' }, { n: '10 yrs', label: 'Of experience' }, { n: '4.9 ★', label: 'Average rating' }],
     tours: { title: 'Our tours', sub: 'Scheduled departures year-round. Max 12 people per group.', difficulty: 'Difficulty', includes: 'Included', pickDate: 'Choose your date', spots: 'spots', fewSpots: 'Only {n} left!', from: 'from', perPerson: 'per person', nextDates: 'Next departures:', details: 'See details', easy: 'Easy', moderate: 'Moderate', chooseTour: 'Choose a tour...', notSure: "I'm not sure yet" },
-    modal: { people: 'Number of people', total: 'Total', reserve: 'Pre-book this tour', selectFirst: 'Select a date to continue', back: 'Back' },
+    modal: { people: 'Number of people', total: 'Total', reserve: 'Book this tour', selectFirst: 'Select a date to continue', back: 'Back' },
     form: { name: 'Full name', whatsapp: 'WhatsApp / Phone', email: 'Email', dest: 'Which tour interests you?', msg: 'Message (optional)', msgPlaceholder: 'Any questions or special needs?', submit: 'Send enquiry', namePh: 'Your name', emailPh: 'you@email.com' },
     payment: { title: 'Complete your payment', total: 'Total to pay', cardNumber: 'Card number', expiry: 'Expiry', secure: 'Secure payment · SSL encrypted', pay: 'Pay', persons: (n: number) => `${n} person${n > 1 ? 's' : ''}` },
-    done: { title: 'Pre-booking sent!', tour: 'Tour:', date: 'Date:', body: 'We will contact you via WhatsApp within 2 hours to confirm your spot.', close: 'Close' },
+    done: { title: 'Booking sent!', tour: 'Tour:', date: 'Date:', body: 'We will contact you via WhatsApp within 2 hours to confirm your spot.', close: 'Close' },
     why: { title: 'Why travel with us', sub: "We're not a mass-market agency. We're a team of passionate guides who craft every itinerary as if we were going ourselves.", items: [{ title: 'Small groups always', desc: 'Max 12 people. More attention, less noise, better experience.' }, { title: 'Certified local guides', desc: 'All our guides are licensed and have years in the field.' }, { title: 'Unmissable moments', desc: 'We arrive early, stay later. The best shots are from our tours.' }, { title: 'Transparent pricing', desc: 'The price includes everything we say. No hidden fees, ever.' }] },
     testimonials: { title: 'What our travellers say' },
     contact: { title: 'Ready to go?', sub: "Fill in the form and we'll reply within 24 hours with everything you need.", noPayment: 'No payment required now. We confirm your spot via WhatsApp.' },
@@ -30,10 +30,10 @@ const i18n = {
     hero: { badge: 'Tours en grupos pequeños · Chiang Mai, Tailandia', title1: 'Descubrí Chiang Mai', title2: 'como un local', sub: 'Guías expertos. Grupos reducidos. Experiencias que no vas a olvidar.', btn1: 'Ver tours', btn2: 'Cómo funciona' },
     stats: [{ n: '+800', label: 'Viajeros felices' }, { n: '8', label: 'Tours únicos' }, { n: '10 años', label: 'De experiencia' }, { n: '4.9 ★', label: 'Calificación promedio' }],
     tours: { title: 'Nuestros tours', sub: 'Salidas programadas todo el año. Máximo 12 personas por grupo.', difficulty: 'Dificultad', includes: 'Incluye', pickDate: 'Elegí tu fecha', spots: 'lugares', fewSpots: '¡Solo {n} lugares!', from: 'desde', perPerson: 'por persona', nextDates: 'Próximas salidas:', details: 'Ver detalles', easy: 'Fácil', moderate: 'Moderado', chooseTour: 'Elegir tour...', notSure: 'No sé todavía' },
-    modal: { people: 'Cantidad de personas', total: 'Total', reserve: 'Pre-reservar este tour', selectFirst: 'Elegí una fecha para continuar', back: 'Volver' },
+    modal: { people: 'Cantidad de personas', total: 'Total', reserve: 'Reservar este tour', selectFirst: 'Elegí una fecha para continuar', back: 'Volver' },
     form: { name: 'Nombre y apellido', whatsapp: 'WhatsApp / Teléfono', email: 'Email', dest: '¿Qué tour te interesa?', msg: 'Mensaje (opcional)', msgPlaceholder: '¿Alguna pregunta o necesidad especial?', submit: 'Enviar consulta', namePh: 'Tu nombre', emailPh: 'tu@email.com' },
     payment: { title: 'Completá tu pago', total: 'Total a pagar', cardNumber: 'Número de tarjeta', expiry: 'Vencimiento', secure: 'Pago seguro · Cifrado SSL', pay: 'Pagar', persons: (n: number) => `${n} persona${n > 1 ? 's' : ''}` },
-    done: { title: '¡Pre-reserva enviada!', tour: 'Tour:', date: 'Fecha:', body: 'Te contactamos por WhatsApp en menos de 2 horas para confirmar tu lugar.', close: 'Cerrar' },
+    done: { title: '¡Reserva enviada!', tour: 'Tour:', date: 'Fecha:', body: 'Te contactamos por WhatsApp en menos de 2 horas para confirmar tu lugar.', close: 'Cerrar' },
     why: { title: 'Por qué viajar con nosotros', sub: 'No somos una agencia masiva. Somos un equipo apasionado que arma cada viaje con el mismo cuidado con el que lo haríamos para nosotros.', items: [{ title: 'Grupos pequeños siempre', desc: 'Máximo 12 personas. Más atención, menos ruido, mejor experiencia.' }, { title: 'Guías locales certificados', desc: 'Todos nuestros guías tienen licencia y años de experiencia en el terreno.' }, { title: 'Momentos únicos', desc: 'Llegamos temprano, nos quedamos más. Las mejores fotos son de nuestros tours.' }, { title: 'Precios transparentes', desc: 'El precio incluye todo lo que decimos. Sin costos ocultos.' }] },
     testimonials: { title: 'Lo que dicen nuestros viajeros' },
     contact: { title: '¿Listo para partir?', sub: 'Completá el formulario y te respondemos en menos de 24 horas con toda la información.', noPayment: 'No se realiza ningún pago ahora. Confirmamos tu lugar por WhatsApp.' },
@@ -44,10 +44,10 @@ const i18n = {
     hero: { badge: 'Kleine Gruppen · Chiang Mai, Thailand', title1: 'Entdecke Chiang Mai', title2: 'wie ein Einheimischer', sub: 'Erfahrene Guides. Kleine Gruppen. Erlebnisse, die du nie vergessen wirst.', btn1: 'Touren entdecken', btn2: 'Wie es funktioniert' },
     stats: [{ n: '+800', label: 'Zufriedene Reisende' }, { n: '8', label: 'Kuratierte Touren' }, { n: '10 J.', label: 'Erfahrung' }, { n: '4.9 ★', label: 'Durchschnittsbewertung' }],
     tours: { title: 'Unsere Touren', sub: 'Ganzjährige Abfahrten. Max. 12 Personen pro Gruppe.', difficulty: 'Schwierigkeit', includes: 'Inklusive', pickDate: 'Datum wählen', spots: 'Plätze', fewSpots: 'Nur noch {n}!', from: 'ab', perPerson: 'pro Person', nextDates: 'Nächste Abfahrten:', details: 'Details', easy: 'Einfach', moderate: 'Mittel', chooseTour: 'Tour wählen...', notSure: 'Ich bin noch unsicher' },
-    modal: { people: 'Personenanzahl', total: 'Gesamt', reserve: 'Tour vorbuchen', selectFirst: 'Datum wählen um fortzufahren', back: 'Zurück' },
+    modal: { people: 'Personenanzahl', total: 'Gesamt', reserve: 'Tour buchen', selectFirst: 'Datum wählen um fortzufahren', back: 'Zurück' },
     form: { name: 'Vollständiger Name', whatsapp: 'WhatsApp / Telefon', email: 'E-Mail', dest: 'Welche Tour interessiert Sie?', msg: 'Nachricht (optional)', msgPlaceholder: 'Fragen oder besondere Wünsche?', submit: 'Anfrage senden', namePh: 'Ihr Name', emailPh: 'sie@email.de' },
     payment: { title: 'Zahlung abschließen', total: 'Zu zahlender Betrag', cardNumber: 'Kartennummer', expiry: 'Ablaufdatum', secure: 'Sichere Zahlung · SSL-verschlüsselt', pay: 'Bezahlen', persons: (n: number) => `${n} Person${n > 1 ? 'en' : ''}` },
-    done: { title: 'Vorbuchung gesendet!', tour: 'Tour:', date: 'Datum:', body: 'Wir melden uns innerhalb von 2 Stunden via WhatsApp, um Ihren Platz zu bestätigen.', close: 'Schließen' },
+    done: { title: 'Buchung gesendet!', tour: 'Tour:', date: 'Datum:', body: 'Wir melden uns innerhalb von 2 Stunden via WhatsApp, um Ihren Platz zu bestätigen.', close: 'Schließen' },
     why: { title: 'Warum mit uns reisen', sub: 'Wir sind keine Massentourismusagentur. Wir sind ein leidenschaftliches Team, das jede Reiseroute so sorgfältig plant, als würden wir selbst mitfahren.', items: [{ title: 'Immer kleine Gruppen', desc: 'Max. 12 Personen. Mehr Aufmerksamkeit, weniger Lärm, besseres Erlebnis.' }, { title: 'Zertifizierte lokale Guides', desc: 'Alle unsere Guides sind lizenziert und haben jahrelange Felderfahrung.' }, { title: 'Unvergessliche Momente', desc: 'Wir kommen früh, bleiben länger. Die besten Fotos entstehen bei unseren Touren.' }, { title: 'Transparente Preise', desc: 'Der Preis beinhaltet alles, was wir versprechen. Keine versteckten Kosten.' }] },
     testimonials: { title: 'Was unsere Reisenden sagen' },
     contact: { title: 'Bereit loszulegen?', sub: 'Füllen Sie das Formular aus und wir antworten innerhalb von 24 Stunden.', noPayment: 'Keine Zahlung jetzt erforderlich. Wir bestätigen Ihren Platz per WhatsApp.' },
@@ -58,10 +58,10 @@ const i18n = {
     hero: { badge: 'Tours em pequenos grupos · Chiang Mai, Tailândia', title1: 'Descubra Chiang Mai', title2: 'como um local', sub: 'Guias especializados. Grupos pequenos. Experiências que você nunca vai esquecer.', btn1: 'Explorar tours', btn2: 'Como funciona' },
     stats: [{ n: '+800', label: 'Viajantes felizes' }, { n: '8', label: 'Tours selecionados' }, { n: '10 anos', label: 'De experiência' }, { n: '4.9 ★', label: 'Avaliação média' }],
     tours: { title: 'Nossos tours', sub: 'Partidas programadas o ano todo. Máx. 12 pessoas por grupo.', difficulty: 'Dificuldade', includes: 'Incluído', pickDate: 'Escolha sua data', spots: 'vagas', fewSpots: 'Só {n} restantes!', from: 'a partir de', perPerson: 'por pessoa', nextDates: 'Próximas partidas:', details: 'Ver detalhes', easy: 'Fácil', moderate: 'Moderado', chooseTour: 'Escolha um tour...', notSure: 'Ainda não sei' },
-    modal: { people: 'Número de pessoas', total: 'Total', reserve: 'Pré-reservar este tour', selectFirst: 'Selecione uma data para continuar', back: 'Voltar' },
+    modal: { people: 'Número de pessoas', total: 'Total', reserve: 'Reservar este tour', selectFirst: 'Selecione uma data para continuar', back: 'Voltar' },
     form: { name: 'Nome completo', whatsapp: 'WhatsApp / Telefone', email: 'E-mail', dest: 'Qual tour te interessa?', msg: 'Mensagem (opcional)', msgPlaceholder: 'Alguma dúvida ou necessidade especial?', submit: 'Enviar consulta', namePh: 'Seu nome', emailPh: 'voce@email.com' },
     payment: { title: 'Conclua seu pagamento', total: 'Total a pagar', cardNumber: 'Número do cartão', expiry: 'Validade', secure: 'Pagamento seguro · Criptografia SSL', pay: 'Pagar', persons: (n: number) => `${n} pessoa${n > 1 ? 's' : ''}` },
-    done: { title: 'Pré-reserva enviada!', tour: 'Tour:', date: 'Data:', body: 'Entraremos em contato pelo WhatsApp em até 2 horas para confirmar seu lugar.', close: 'Fechar' },
+    done: { title: 'Reserva enviada!', tour: 'Tour:', date: 'Data:', body: 'Entraremos em contato pelo WhatsApp em até 2 horas para confirmar seu lugar.', close: 'Fechar' },
     why: { title: 'Por que viajar conosco', sub: 'Não somos uma agência de massa. Somos uma equipe apaixonada que elabora cada roteiro como se fôssemos nós mesmos viajar.', items: [{ title: 'Grupos pequenos sempre', desc: 'Máx. 12 pessoas. Mais atenção, menos barulho, melhor experiência.' }, { title: 'Guias locais certificados', desc: 'Todos os nossos guias são licenciados e têm anos de experiência.' }, { title: 'Momentos inesquecíveis', desc: 'Chegamos cedo, ficamos mais. As melhores fotos são dos nossos tours.' }, { title: 'Preços transparentes', desc: 'O preço inclui tudo que prometemos. Sem taxas ocultas.' }] },
     testimonials: { title: 'O que nossos viajantes dizem' },
     contact: { title: 'Pronto para partir?', sub: 'Preencha o formulário e respondemos em até 24 horas com tudo que você precisa.', noPayment: 'Nenhum pagamento necessário agora. Confirmamos seu lugar pelo WhatsApp.' },
@@ -72,10 +72,10 @@ const i18n = {
     hero: { badge: 'Tour in piccoli gruppi · Chiang Mai, Thailandia', title1: 'Scopri Chiang Mai', title2: 'come un locale', sub: 'Guide esperte. Gruppi piccoli. Esperienze che non dimenticherai mai.', btn1: 'Esplora i tour', btn2: 'Come funziona' },
     stats: [{ n: '+800', label: 'Viaggiatori soddisfatti' }, { n: '8', label: 'Tour selezionati' }, { n: '10 anni', label: 'Di esperienza' }, { n: '4.9 ★', label: 'Valutazione media' }],
     tours: { title: 'I nostri tour', sub: "Partenze programmate tutto l'anno. Max 12 persone per gruppo.", difficulty: 'Difficoltà', includes: 'Incluso', pickDate: 'Scegli la tua data', spots: 'posti', fewSpots: 'Solo {n} rimasti!', from: 'da', perPerson: 'a persona', nextDates: 'Prossime partenze:', details: 'Vedi dettagli', easy: 'Facile', moderate: 'Moderato', chooseTour: 'Scegli un tour...', notSure: 'Non sono ancora sicuro' },
-    modal: { people: 'Numero di persone', total: 'Totale', reserve: 'Pre-prenota questo tour', selectFirst: 'Seleziona una data per continuare', back: 'Indietro' },
+    modal: { people: 'Numero di persone', total: 'Totale', reserve: 'Prenota questo tour', selectFirst: 'Seleziona una data per continuare', back: 'Indietro' },
     form: { name: 'Nome completo', whatsapp: 'WhatsApp / Telefono', email: 'Email', dest: 'Quale tour ti interessa?', msg: 'Messaggio (opzionale)', msgPlaceholder: 'Domande o esigenze speciali?', submit: 'Invia richiesta', namePh: 'Il tuo nome', emailPh: 'tu@email.it' },
     payment: { title: 'Completa il pagamento', total: 'Totale da pagare', cardNumber: 'Numero di carta', expiry: 'Scadenza', secure: 'Pagamento sicuro · Crittografia SSL', pay: 'Paga', persons: (n: number) => `${n} persona${n > 1 ? 'e' : ''}` },
-    done: { title: 'Pre-prenotazione inviata!', tour: 'Tour:', date: 'Data:', body: 'Ti contatteremo via WhatsApp entro 2 ore per confermare il tuo posto.', close: 'Chiudi' },
+    done: { title: 'Prenotazione inviata!', tour: 'Tour:', date: 'Data:', body: 'Ti contatteremo via WhatsApp entro 2 ore per confermare il tuo posto.', close: 'Chiudi' },
     why: { title: 'Perché viaggiare con noi', sub: "Non siamo un'agenzia di massa. Siamo un team appassionato che crea ogni itinerario come se lo facessimo per noi stessi.", items: [{ title: 'Sempre gruppi piccoli', desc: 'Max 12 persone. Più attenzione, meno caos, esperienza migliore.' }, { title: 'Guide locali certificate', desc: 'Tutte le nostre guide sono autorizzate e hanno anni di esperienza sul campo.' }, { title: 'Momenti imperdibili', desc: 'Arriviamo presto, restiamo di più. Le foto migliori vengono dai nostri tour.' }, { title: 'Prezzi trasparenti', desc: 'Il prezzo include tutto ciò che diciamo. Nessun costo nascosto.' }] },
     testimonials: { title: 'Cosa dicono i nostri viaggiatori' },
     contact: { title: 'Pronto a partire?', sub: 'Compila il modulo e ti risponderemo entro 24 ore con tutto ciò di cui hai bisogno.', noPayment: 'Nessun pagamento richiesto ora. Confermiamo il tuo posto via WhatsApp.' },
@@ -86,10 +86,10 @@ const i18n = {
     hero: { badge: 'Туры в малых группах · Чиангмай, Таиланд', title1: 'Откройте Чиангмай', title2: 'как местный', sub: 'Опытные гиды. Маленькие группы. Впечатления, которые вы не забудете никогда.', btn1: 'Смотреть туры', btn2: 'Как это работает' },
     stats: [{ n: '+800', label: 'Довольных путешественников' }, { n: '8', label: 'Уникальных туров' }, { n: '10 лет', label: 'Опыта' }, { n: '4.9 ★', label: 'Средняя оценка' }],
     tours: { title: 'Наши туры', sub: 'Плановые отправления круглый год. Макс. 12 человек в группе.', difficulty: 'Сложность', includes: 'Включено', pickDate: 'Выберите дату', spots: 'мест', fewSpots: 'Осталось только {n}!', from: 'от', perPerson: 'с человека', nextDates: 'Ближайшие даты:', details: 'Подробнее', easy: 'Лёгкий', moderate: 'Средний', chooseTour: 'Выберите тур...', notSure: 'Ещё не знаю' },
-    modal: { people: 'Количество человек', total: 'Итого', reserve: 'Предварительно забронировать', selectFirst: 'Выберите дату для продолжения', back: 'Назад' },
+    modal: { people: 'Количество человек', total: 'Итого', reserve: 'Забронировать тур', selectFirst: 'Выберите дату для продолжения', back: 'Назад' },
     form: { name: 'Полное имя', whatsapp: 'WhatsApp / Телефон', email: 'Эл. почта', dest: 'Какой тур вас интересует?', msg: 'Сообщение (необязательно)', msgPlaceholder: 'Вопросы или особые пожелания?', submit: 'Отправить запрос', namePh: 'Ваше имя', emailPh: 'vy@email.com' },
     payment: { title: 'Завершите оплату', total: 'Сумма к оплате', cardNumber: 'Номер карты', expiry: 'Срок действия', secure: 'Безопасная оплата · SSL-шифрование', pay: 'Оплатить', persons: (n: number) => `${n} чел.` },
-    done: { title: 'Предзаказ отправлен!', tour: 'Тур:', date: 'Дата:', body: 'Мы свяжемся с вами через WhatsApp в течение 2 часов для подтверждения места.', close: 'Закрыть' },
+    done: { title: 'Reserva enviada!', tour: 'Тур:', date: 'Дата:', body: 'Мы свяжемся с вами через WhatsApp в течение 2 часов для подтверждения места.', close: 'Закрыть' },
     why: { title: 'Почему выбирают нас', sub: 'Мы не массовое агентство. Мы команда увлечённых гидов, которые создают каждый маршрут так, будто едут сами.', items: [{ title: 'Только малые группы', desc: 'Макс. 12 человек. Больше внимания, меньше суеты, лучше впечатления.' }, { title: 'Сертифицированные местные гиды', desc: 'Все наши гиды лицензированы и имеют многолетний опыт работы.' }, { title: 'Незабываемые моменты', desc: 'Мы приезжаем раньше, уходим позже. Лучшие фото — с наших туров.' }, { title: 'Прозрачные цены', desc: 'Цена включает всё, что мы обещаем. Никаких скрытых платежей.' }] },
     testimonials: { title: 'Что говорят наши путешественники' },
     contact: { title: 'Готовы отправиться?', sub: 'Заполните форму и мы ответим в течение 24 часов со всей необходимой информацией.', noPayment: 'Оплата сейчас не требуется. Мы подтверждаем место через WhatsApp.' },
@@ -114,10 +114,10 @@ const i18n = {
     hero: { badge: '少人数ツアー · タイ・チェンマイ', title1: 'チェンマイを発見しよう', title2: '地元の人のように', sub: '経験豊富なガイド。少人数グループ。一生忘れられない体験。', btn1: 'ツアーを探す', btn2: '仕組みを知る' },
     stats: [{ n: '+800', label: '満足したお客様' }, { n: '8', label: '厳選ツアー' }, { n: '10年', label: '豊富な経験' }, { n: '4.9 ★', label: '平均評価' }],
     tours: { title: '私たちのツアー', sub: '年間を通じて定期出発。1グループ最大12名。', difficulty: '難易度', includes: '含まれるもの', pickDate: '日付を選択', spots: '空き', fewSpots: '残り{n}席！', from: '料金', perPerson: '1名', nextDates: '次回出発:', details: '詳細を見る', easy: '簡単', moderate: '普通', chooseTour: 'ツアーを選択...', notSure: 'まだ決まっていません' },
-    modal: { people: '人数', total: '合計', reserve: 'このツアーを仮予約', selectFirst: '続けるには日付を選択してください', back: '戻る' },
+    modal: { people: '人数', total: '合計', reserve: 'このツアーを予約', selectFirst: '続けるには日付を選択してください', back: '戻る' },
     form: { name: '氏名', whatsapp: 'WhatsApp / 電話番号', email: 'メールアドレス', dest: 'どのツアーに興味がありますか?', msg: 'メッセージ（任意）', msgPlaceholder: 'ご質問や特別なご要望はありますか?', submit: 'お問い合わせを送る', namePh: 'お名前', emailPh: 'anata@email.com' },
     payment: { title: 'お支払いを完了する', total: 'お支払い合計', cardNumber: 'カード番号', expiry: '有効期限', secure: '安全な支払い · SSL暗号化', pay: '支払う', persons: (n: number) => `${n}名` },
-    done: { title: '仮予約を送信しました！', tour: 'ツアー：', date: '日付：', body: '2時間以内にWhatsAppでご連絡し、お席を確認いたします。', close: '閉じる' },
+    done: { title: '予約を送信しました！', tour: 'ツアー：', date: '日付：', body: '2時間以内にWhatsAppでご連絡し、お席を確認いたします。', close: '閉じる' },
     why: { title: '私たちと旅する理由', sub: '私たちは大手旅行会社ではありません。情熱的なガイドのチームが、まるで自分たちが旅するかのように一つひとつの旅程を作り上げています。', items: [{ title: '常に少人数グループ', desc: '最大12名。より多くの配慮、より少ない混雑、より良い体験。' }, { title: '認定地元ガイド', desc: '全てのガイドはライセンスを持ち、現場での豊富な経験があります。' }, { title: '忘れられない瞬間', desc: '早く到着し、長く滞在。最高の写真は私たちのツアーから生まれます。' }, { title: '透明な料金', desc: '料金には私たちが約束するすべてが含まれています。隠れた費用は一切ありません。' }] },
     testimonials: { title: '旅行者の声' },
     contact: { title: '出発の準備はできましたか?', sub: 'フォームに記入していただければ、24時間以内に必要な情報をお送りします。', noPayment: '今すぐお支払いは不要です。WhatsAppでお席を確認いたします。' },
@@ -142,10 +142,10 @@ const i18n = {
     hero: { badge: 'ทัวร์กลุ่มเล็ก · เชียงใหม่ ประเทศไทย', title1: 'ค้นพบเชียงใหม่', title2: 'แบบคนท้องถิ่น', sub: 'ไกด์ผู้เชี่ยวชาญ กลุ่มเล็ก ประสบการณ์ที่คุณจะไม่มีวันลืม', btn1: 'สำรวจทัวร์', btn2: 'วิธีการทำงาน' },
     stats: [{ n: '+800', label: 'นักท่องเที่ยวที่พึงพอใจ' }, { n: '8', label: 'ทัวร์คัดสรร' }, { n: '10 ปี', label: 'ประสบการณ์' }, { n: '4.9 ★', label: 'คะแนนเฉลี่ย' }],
     tours: { title: 'ทัวร์ของเรา', sub: 'ออกเดินทางตลอดปี สูงสุด 12 คนต่อกลุ่ม', difficulty: 'ความยาก', includes: 'รวมอยู่แล้ว', pickDate: 'เลือกวันที่', spots: 'ที่นั่ง', fewSpots: 'เหลือเพียง {n} ที่!', from: 'เริ่มต้น', perPerson: 'ต่อคน', nextDates: 'วันออกเดินทางถัดไป:', details: 'ดูรายละเอียด', easy: 'ง่าย', moderate: 'ปานกลาง', chooseTour: 'เลือกทัวร์...', notSure: 'ยังไม่แน่ใจ' },
-    modal: { people: 'จำนวนคน', total: 'รวมทั้งหมด', reserve: 'จองทัวร์นี้ล่วงหน้า', selectFirst: 'กรุณาเลือกวันที่ก่อนดำเนินการต่อ', back: 'กลับ' },
+    modal: { people: 'จำนวนคน', total: 'รวมทั้งหมด', reserve: 'จองทัวร์นี้', selectFirst: 'กรุณาเลือกวันที่ก่อนดำเนินการต่อ', back: 'กลับ' },
     form: { name: 'ชื่อ-นามสกุล', whatsapp: 'WhatsApp / โทรศัพท์', email: 'อีเมล', dest: 'คุณสนใจทัวร์ไหน?', msg: 'ข้อความ (ไม่บังคับ)', msgPlaceholder: 'มีคำถามหรือความต้องการพิเศษ?', submit: 'ส่งคำถาม', namePh: 'ชื่อของคุณ', emailPh: 'khun@email.com' },
     payment: { title: 'ชำระเงิน', total: 'ยอดชำระ', cardNumber: 'หมายเลขบัตร', expiry: 'วันหมดอายุ', secure: 'การชำระเงินที่ปลอดภัย · เข้ารหัส SSL', pay: 'ชำระเงิน', persons: (n: number) => `${n} คน` },
-    done: { title: 'ส่งการจองล่วงหน้าแล้ว!', tour: 'ทัวร์:', date: 'วันที่:', body: 'เราจะติดต่อคุณผ่าน WhatsApp ภายใน 2 ชั่วโมงเพื่อยืนยันที่นั่ง', close: 'ปิด' },
+    done: { title: 'ส่งการจองแล้ว!', tour: 'ทัวร์:', date: 'วันที่:', body: 'เราจะติดต่อคุณผ่าน WhatsApp ภายใน 2 ชั่วโมงเพื่อยืนยันที่นั่ง', close: 'ปิด' },
     why: { title: 'ทำไมต้องเดินทางกับเรา', sub: 'เราไม่ใช่บริษัทนำเที่ยวแบบมวลชน เราคือทีมไกด์ที่มีความหลงใหล ที่ออกแบบทุกเส้นทางราวกับว่าเราเองกำลังเดินทาง', items: [{ title: 'กลุ่มเล็กเสมอ', desc: 'สูงสุด 12 คน ใส่ใจมากขึ้น เสียงรบกวนน้อยลง ประสบการณ์ดีขึ้น' }, { title: 'ไกด์ท้องถิ่นที่มีใบรับรอง', desc: 'ไกด์ทุกคนมีใบอนุญาตและมีประสบการณ์ภาคสนามหลายปี' }, { title: 'ช่วงเวลาที่ไม่ควรพลาด', desc: 'เราไปถึงก่อนและอยู่นานขึ้น ภาพถ่ายที่ดีที่สุดมาจากทัวร์ของเรา' }, { title: 'ราคาโปร่งใส', desc: 'ราคารวมทุกอย่างที่เราบอก ไม่มีค่าใช้จ่ายซ่อนเร้น' }] },
     testimonials: { title: 'สิ่งที่นักท่องเที่ยวของเราพูด' },
     contact: { title: 'พร้อมออกเดินทางแล้วหรือยัง?', sub: 'กรอกแบบฟอร์มแล้วเราจะตอบกลับภายใน 24 ชั่วโมงพร้อมข้อมูลทั้งหมดที่คุณต้องการ', noPayment: 'ไม่ต้องชำระเงินตอนนี้ เราจะยืนยันที่นั่งผ่าน WhatsApp' },
@@ -865,7 +865,7 @@ export default function ToursPage() {
                   </div>
                   <div className="flex items-center justify-between">
                     <span className={`text-xs font-semibold px-2.5 py-1 rounded-full ${tour.difficulty === 'easy' ? 'bg-teal-50 text-teal-700' : 'bg-amber-50 text-amber-700'}`}>
-                      {diffLabel(tour.difficulty)}
+                      {t.tours.difficulty}: {diffLabel(tour.difficulty)}
                     </span>
                     <span className="flex items-center gap-1 text-sm font-bold group-hover:gap-2 transition-all" style={{ color: '#E8862A' }}>
                       {t.tours.details} <ChevronRight size={16} />
@@ -1002,7 +1002,6 @@ export default function ToursPage() {
               {/* Gallery */}
               <div className="relative h-64 md:h-72 overflow-hidden rounded-t-3xl shrink-0">
                 <img src={selectedTour.images[activeImg]} alt={getL(selectedTour.name, lang)} className="w-full h-full object-cover" />
-                <div className={`absolute inset-0 bg-gradient-to-t ${selectedTour.accent}`} />
                 <button onClick={closeTour} className="absolute top-4 right-4 w-9 h-9 rounded-full flex items-center justify-center text-white transition-colors" style={{ background: 'rgba(26,18,8,0.5)' }}>
                   <X size={18} />
                 </button>
