@@ -648,7 +648,7 @@ export default function ToursPage() {
             <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ background: '#E8862A' }}>
               <Compass size={15} className="text-white" />
             </div>
-            <span className="font-black text-lg tracking-tight" style={{ color: '#1A1208' }}>Lotus Trails</span>
+            <span className="font-black text-lg tracking-tight" style={{ color: '#1A1208' }}>Chiang Mai Personal Tour</span>
           </div>
 
           <div className="hidden md:flex items-center gap-8 text-sm font-medium" style={{ color: '#5C3A1A' }}>
@@ -941,7 +941,7 @@ export default function ToursPage() {
           <div className="w-6 h-6 rounded-full flex items-center justify-center" style={{ background: '#E8862A' }}>
             <Compass size={12} className="text-white" />
           </div>
-          <span className="font-black" style={{ color: '#5C3A1A' }}>Lotus Trails</span>
+          <span className="font-black" style={{ color: '#5C3A1A' }}>Chiang Mai Personal Tour</span>
         </div>
         <p>© 2026 · {t.footer}</p>
       </footer>
