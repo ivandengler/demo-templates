@@ -399,19 +399,7 @@ export default function ToursPage() {
               {t.hero.title1}<br />
               <span style={{ color: '#F5C87A' }}>{t.hero.title2}</span>
             </h1>
-            <p className="text-xl text-stone-200 mb-6 leading-relaxed max-w-xl mx-auto">{t.hero.sub}</p>
-            <div className="flex items-center justify-center gap-3 mb-10">
-              <div className="flex items-center gap-1">
-                {[...Array(5)].map((_, i) => (
-                  <svg key={i} width="20" height="20" viewBox="0 0 24 24" fill="#00B67A"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                ))}
-              </div>
-              <span className="text-white font-bold text-sm">5.0 Excellent</span>
-              <span className="text-white/60 text-sm">·</span>
-              <svg width="80" height="18" viewBox="0 0 130 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <text x="0" y="22" fontFamily="Arial, sans-serif" fontWeight="bold" fontSize="18" fill="white">Trustpilot</text>
-              </svg>
-            </div>
+            <p className="text-xl text-stone-200 mb-10 leading-relaxed max-w-xl mx-auto">{t.hero.sub}</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="#tours"
@@ -561,6 +549,16 @@ export default function ToursPage() {
       {/* ── TESTIMONIALS ─────────────────────────────────────────── */}
       <section id="reviews" className="py-24 px-4">
         <div className="max-w-5xl mx-auto">
+          <div className="flex items-center justify-center gap-3 mb-6">
+            <div className="flex items-center gap-1">
+              {[...Array(5)].map((_, i) => (
+                <svg key={i} width="22" height="22" viewBox="0 0 24 24" fill="#00B67A"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              ))}
+            </div>
+            <span className="font-bold text-sm" style={{ color: '#1A1208' }}>5.0 Excellent</span>
+            <span style={{ color: '#A06030' }}>·</span>
+            <span className="font-black text-lg tracking-tight" style={{ color: '#00B67A' }}>Trustpilot</span>
+          </div>
           <h2 className="text-4xl font-black text-center mb-16" style={{ color: '#1A1208' }}>{t.testimonials.title}</h2>
           <div className="grid md:grid-cols-3 gap-6">
             {testimonials[lang].map(t2 => (
