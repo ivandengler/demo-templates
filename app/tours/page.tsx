@@ -383,7 +383,7 @@ export default function ToursPage() {
             alt="Chiang Mai temples"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(253,247,238,0.15) 0%, rgba(30,15,0,0.55) 60%, rgba(253,247,238,1) 100%)' }} />
+          <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.45) 60%, rgba(0,0,0,0.65) 100%)' }} />
         </div>
 
         <div className="relative text-center px-4 max-w-3xl mx-auto pt-24">
