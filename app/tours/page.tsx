@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion'
 import {
   MapPin, Clock, Users, Star, Calendar, ChevronRight,
   X, ChevronLeft, ChevronDown, Phone, Mail, Share2,
@@ -354,6 +354,62 @@ function formatPrice(p: number, currency: string) {
   return `${currency} ${p.toLocaleString()}`
 }
 
+// ─── Why Section with parallax gallery ───────────────────────────────────────
+
+function WhySection({ t }: { t: typeof i18n['en'] }) {
+  const ref = useRef<HTMLElement>(null)
+  const { scrollYProgress } = useScroll({ target: ref, offset: ['start end', 'end start'] })
+  const leftY  = useTransform(scrollYProgress, [0, 1], ['6%', '-6%'])
+  const rightY = useTransform(scrollYProgress, [0, 1], ['-6%', '6%'])
+
+  const leftImgs = [
+    '/elephant-sanctuary.jpg',
+    'https://images.unsplash.com/photo-1528181304800-259b08848526?w=500&q=85&auto=format&fit=crop',
+    'https://images.unsplash.com/photo-1559314809-0d155014e29e?w=500&q=85&auto=format&fit=crop',
+  ]
+  const rightImgs = [
+    'https://images.unsplash.com/photo-1563492065599-3520f775eeed?w=500&q=85&auto=format&fit=crop',
+    'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&q=85&auto=format&fit=crop',
+    '/white-temple.jpg',
+  ]
+
+  return (
+    <section id="about" ref={ref} className="py-24 overflow-hidden" style={{ background: '#FFF8EF' }}>
+      <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-16 items-center">
+        <div>
+          <h2 className="text-4xl md:text-5xl font-black mb-6" style={{ color: '#1A1208' }}>{t.why.title}</h2>
+          <p className="text-lg leading-relaxed mb-8" style={{ color: '#7A4E2A' }}>{t.why.sub}</p>
+          <div className="space-y-5">
+            {t.why.items.map(item => (
+              <div key={item.title} className="flex gap-4">
+                <div className="w-9 h-9 rounded-xl flex items-center justify-center shrink-0 mt-0.5" style={{ background: 'rgba(232,134,42,0.12)' }}>
+                  <div className="w-2 h-2 rounded-full" style={{ background: '#E8862A' }} />
+                </div>
+                <div>
+                  <div className="font-bold mb-0.5" style={{ color: '#1A1208' }}>{item.title}</div>
+                  <div className="text-sm" style={{ color: '#7A4E2A' }}>{item.desc}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="grid grid-cols-2 gap-4" style={{ maxHeight: 560, overflow: 'hidden' }}>
+          <motion.div className="flex flex-col gap-4" style={{ y: leftY }}>
+            {leftImgs.map((src, i) => (
+              <img key={i} src={src} alt="" className="rounded-2xl w-full object-cover" style={{ height: 180 }} />
+            ))}
+          </motion.div>
+          <motion.div className="flex flex-col gap-4 mt-10" style={{ y: rightY }}>
+            {rightImgs.map((src, i) => (
+              <img key={i} src={src} alt="" className="rounded-2xl w-full object-cover" style={{ height: 180 }} />
+            ))}
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
 // ─── Component ────────────────────────────────────────────────────────────────
 
 export default function ToursPage() {
@@ -615,33 +671,7 @@ export default function ToursPage() {
       </section>
 
       {/* ── ABOUT ─────────────────────────────────────────────────── */}
-      <section id="about" className="py-24" style={{ background: '#FFF8EF' }}>
-        <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-16 items-center">
-          <div>
-            <h2 className="text-4xl md:text-5xl font-black mb-6" style={{ color: '#1A1208' }}>{t.why.title}</h2>
-            <p className="text-lg leading-relaxed mb-8" style={{ color: '#7A4E2A' }}>{t.why.sub}</p>
-            <div className="space-y-5">
-              {t.why.items.map(item => (
-                <div key={item.title} className="flex gap-4">
-                  <div className="w-9 h-9 rounded-xl flex items-center justify-center shrink-0 mt-0.5" style={{ background: 'rgba(232,134,42,0.12)' }}>
-                    <div className="w-2 h-2 rounded-full" style={{ background: '#E8862A' }} />
-                  </div>
-                  <div>
-                    <div className="font-bold mb-0.5" style={{ color: '#1A1208' }}>{item.title}</div>
-                    <div className="text-sm" style={{ color: '#7A4E2A' }}>{item.desc}</div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="grid grid-cols-2 gap-4">
-            <img src="https://images.unsplash.com/photo-1528181304800-259b08848526?w=500&q=85&auto=format&fit=crop" alt="" className="rounded-2xl h-52 w-full object-cover" />
-            <img src="https://images.unsplash.com/photo-1563492065599-3520f775eeed?w=500&q=85&auto=format&fit=crop" alt="" className="rounded-2xl h-52 w-full object-cover mt-8" />
-            <img src="https://images.unsplash.com/photo-1474511320723-9a56873867b5?w=500&q=85&auto=format&fit=crop" alt="" className="rounded-2xl h-52 w-full object-cover -mt-4" />
-            <img src="https://images.unsplash.com/photo-1559314809-0d155014e29e?w=500&q=85&auto=format&fit=crop" alt="" className="rounded-2xl h-52 w-full object-cover mt-4" />
-          </div>
-        </div>
-      </section>
+      <WhySection t={t} />
 
       {/* ── TESTIMONIALS ─────────────────────────────────────────── */}
       <section id="reviews" className="py-24 px-4">
