@@ -12,7 +12,7 @@ import {
 
 const i18n = {
   en: {
-    nav: { destinations: 'Destinations', about: 'About Us', reviews: 'Reviews', contact: 'Contact', cta: 'Book Now' },
+    nav: { destinations: 'Destinations', about: 'About Us', reviews: 'Reviews', contact: 'Contact', location: 'Find Us', cta: 'Book Now' },
     hero: { badge: 'Small-group tours · Chiang Mai, Thailand', title1: 'Discover Chiang Mai', title2: 'like a local', sub: 'Expert guides. Tiny groups. Experiences you will never forget.', btn1: 'Explore tours', btn2: 'How it works' },
     stats: [{ n: '+800', label: 'Happy travellers' }, { n: '8', label: 'Curated tours' }, { n: '10 yrs', label: 'Of experience' }, { n: '4.9 ★', label: 'Average rating' }],
     tours: { title: 'Our tours', sub: 'Scheduled departures year-round. Max 12 people per group.', difficulty: 'Difficulty', includes: 'Included', pickDate: 'Choose your date', spots: 'spots', fewSpots: 'Only {n} left!', from: 'from', perPerson: 'per person', nextDates: 'Next departures:', details: 'See details', easy: 'Easy', moderate: 'Moderate', chooseTour: 'Choose a tour...', notSure: "I'm not sure yet" },
@@ -27,7 +27,7 @@ const i18n = {
     footer: 'Responsible tourism in Thailand · License No. 0000',
   },
   es: {
-    nav: { destinations: 'Destinos', about: 'Nosotros', reviews: 'Opiniones', contact: 'Contacto', cta: 'Reservar' },
+    nav: { destinations: 'Destinos', about: 'Nosotros', reviews: 'Opiniones', contact: 'Contacto', location: 'Cómo llegar', cta: 'Reservar' },
     hero: { badge: 'Tours en grupos pequeños · Chiang Mai, Tailandia', title1: 'Descubrí Chiang Mai', title2: 'como un local', sub: 'Guías expertos. Grupos reducidos. Experiencias que no vas a olvidar.', btn1: 'Ver tours', btn2: 'Cómo funciona' },
     stats: [{ n: '+800', label: 'Viajeros felices' }, { n: '8', label: 'Tours únicos' }, { n: '10 años', label: 'De experiencia' }, { n: '4.9 ★', label: 'Calificación promedio' }],
     tours: { title: 'Nuestros tours', sub: 'Salidas programadas todo el año. Máximo 12 personas por grupo.', difficulty: 'Dificultad', includes: 'Incluye', pickDate: 'Elegí tu fecha', spots: 'lugares', fewSpots: '¡Solo {n} lugares!', from: 'desde', perPerson: 'por persona', nextDates: 'Próximas salidas:', details: 'Ver detalles', easy: 'Fácil', moderate: 'Moderado', chooseTour: 'Elegir tour...', notSure: 'No sé todavía' },
@@ -42,7 +42,7 @@ const i18n = {
     footer: 'Turismo responsable en Tailandia · Legajo Nº 0000',
   },
   de: {
-    nav: { destinations: 'Reiseziele', about: 'Über uns', reviews: 'Bewertungen', contact: 'Kontakt', cta: 'Jetzt buchen' },
+    nav: { destinations: 'Reiseziele', about: 'Über uns', reviews: 'Bewertungen', contact: 'Kontakt', location: 'Anfahrt', cta: 'Jetzt buchen' },
     hero: { badge: 'Kleine Gruppen · Chiang Mai, Thailand', title1: 'Entdecke Chiang Mai', title2: 'wie ein Einheimischer', sub: 'Erfahrene Guides. Kleine Gruppen. Erlebnisse, die du nie vergessen wirst.', btn1: 'Touren entdecken', btn2: 'Wie es funktioniert' },
     stats: [{ n: '+800', label: 'Zufriedene Reisende' }, { n: '8', label: 'Kuratierte Touren' }, { n: '10 J.', label: 'Erfahrung' }, { n: '4.9 ★', label: 'Durchschnittsbewertung' }],
     tours: { title: 'Unsere Touren', sub: 'Ganzjährige Abfahrten. Max. 12 Personen pro Gruppe.', difficulty: 'Schwierigkeit', includes: 'Inklusive', pickDate: 'Datum wählen', spots: 'Plätze', fewSpots: 'Nur noch {n}!', from: 'ab', perPerson: 'pro Person', nextDates: 'Nächste Abfahrten:', details: 'Details', easy: 'Einfach', moderate: 'Mittel', chooseTour: 'Tour wählen...', notSure: 'Ich bin noch unsicher' },
@@ -57,7 +57,7 @@ const i18n = {
     footer: 'Verantwortungsvoller Tourismus in Thailand · Lizenz Nr. 0000',
   },
   pt: {
-    nav: { destinations: 'Destinos', about: 'Sobre nós', reviews: 'Avaliações', contact: 'Contato', cta: 'Reservar' },
+    nav: { destinations: 'Destinos', about: 'Sobre nós', reviews: 'Avaliações', contact: 'Contato', location: 'Como chegar', cta: 'Reservar' },
     hero: { badge: 'Tours em pequenos grupos · Chiang Mai, Tailândia', title1: 'Descubra Chiang Mai', title2: 'como um local', sub: 'Guias especializados. Grupos pequenos. Experiências que você nunca vai esquecer.', btn1: 'Explorar tours', btn2: 'Como funciona' },
     stats: [{ n: '+800', label: 'Viajantes felizes' }, { n: '8', label: 'Tours selecionados' }, { n: '10 anos', label: 'De experiência' }, { n: '4.9 ★', label: 'Avaliação média' }],
     tours: { title: 'Nossos tours', sub: 'Partidas programadas o ano todo. Máx. 12 pessoas por grupo.', difficulty: 'Dificuldade', includes: 'Incluído', pickDate: 'Escolha sua data', spots: 'vagas', fewSpots: 'Só {n} restantes!', from: 'a partir de', perPerson: 'por pessoa', nextDates: 'Próximas partidas:', details: 'Ver detalhes', easy: 'Fácil', moderate: 'Moderado', chooseTour: 'Escolha um tour...', notSure: 'Ainda não sei' },
@@ -72,7 +72,7 @@ const i18n = {
     footer: 'Turismo responsável na Tailândia · Licença Nº 0000',
   },
   it: {
-    nav: { destinations: 'Destinazioni', about: 'Chi siamo', reviews: 'Recensioni', contact: 'Contatti', cta: 'Prenota ora' },
+    nav: { destinations: 'Destinazioni', about: 'Chi siamo', reviews: 'Recensioni', contact: 'Contatti', location: 'Dove siamo', cta: 'Prenota ora' },
     hero: { badge: 'Tour in piccoli gruppi · Chiang Mai, Thailandia', title1: 'Scopri Chiang Mai', title2: 'come un locale', sub: 'Guide esperte. Gruppi piccoli. Esperienze che non dimenticherai mai.', btn1: 'Esplora i tour', btn2: 'Come funziona' },
     stats: [{ n: '+800', label: 'Viaggiatori soddisfatti' }, { n: '8', label: 'Tour selezionati' }, { n: '10 anni', label: 'Di esperienza' }, { n: '4.9 ★', label: 'Valutazione media' }],
     tours: { title: 'I nostri tour', sub: "Partenze programmate tutto l'anno. Max 12 persone per gruppo.", difficulty: 'Difficoltà', includes: 'Incluso', pickDate: 'Scegli la tua data', spots: 'posti', fewSpots: 'Solo {n} rimasti!', from: 'da', perPerson: 'a persona', nextDates: 'Prossime partenze:', details: 'Vedi dettagli', easy: 'Facile', moderate: 'Moderato', chooseTour: 'Scegli un tour...', notSure: 'Non sono ancora sicuro' },
@@ -87,7 +87,7 @@ const i18n = {
     footer: 'Turismo responsabile in Thailandia · Licenza N. 0000',
   },
   ru: {
-    nav: { destinations: 'Направления', about: 'О нас', reviews: 'Отзывы', contact: 'Контакты', cta: 'Забронировать' },
+    nav: { destinations: 'Направления', about: 'О нас', reviews: 'Отзывы', contact: 'Контакты', location: 'Как нас найти', cta: 'Забронировать' },
     hero: { badge: 'Туры в малых группах · Чиангмай, Таиланд', title1: 'Откройте Чиангмай', title2: 'как местный', sub: 'Опытные гиды. Маленькие группы. Впечатления, которые вы не забудете никогда.', btn1: 'Смотреть туры', btn2: 'Как это работает' },
     stats: [{ n: '+800', label: 'Довольных путешественников' }, { n: '8', label: 'Уникальных туров' }, { n: '10 лет', label: 'Опыта' }, { n: '4.9 ★', label: 'Средняя оценка' }],
     tours: { title: 'Наши туры', sub: 'Плановые отправления круглый год. Макс. 12 человек в группе.', difficulty: 'Сложность', includes: 'Включено', pickDate: 'Выберите дату', spots: 'мест', fewSpots: 'Осталось только {n}!', from: 'от', perPerson: 'с человека', nextDates: 'Ближайшие даты:', details: 'Подробнее', easy: 'Лёгкий', moderate: 'Средний', chooseTour: 'Выберите тур...', notSure: 'Ещё не знаю' },
@@ -102,7 +102,7 @@ const i18n = {
     footer: 'Ответственный туризм в Таиланде · Лицензия № 0000',
   },
   zh: {
-    nav: { destinations: '目的地', about: '关于我们', reviews: '评价', contact: '联系我们', cta: '立即预订' },
+    nav: { destinations: '目的地', about: '关于我们', reviews: '评价', contact: '联系我们', location: '找到我们', cta: '立即预订' },
     hero: { badge: '小团游 · 泰国清迈', title1: '探索清迈', title2: '像当地人一样', sub: '专业向导。小团游。永生难忘的体验。', btn1: '探索行程', btn2: '如何运作' },
     stats: [{ n: '+800', label: '满意旅客' }, { n: '8', label: '精选行程' }, { n: '10年', label: '丰富经验' }, { n: '4.9 ★', label: '平均评分' }],
     tours: { title: '我们的行程', sub: '全年定期出发。每组最多12人。', difficulty: '难度', includes: '包含', pickDate: '选择日期', spots: '名额', fewSpots: '仅剩{n}个名额！', from: '起价', perPerson: '每人', nextDates: '近期出发:', details: '查看详情', easy: '轻松', moderate: '中等', chooseTour: '选择行程...', notSure: '还不确定' },
@@ -117,7 +117,7 @@ const i18n = {
     footer: '泰国负责任旅游 · 许可证编号 0000',
   },
   ja: {
-    nav: { destinations: '目的地', about: '私たちについて', reviews: 'レビュー', contact: 'お問い合わせ', cta: '予約する' },
+    nav: { destinations: '目的地', about: '私たちについて', reviews: 'レビュー', contact: 'お問い合わせ', location: 'アクセス', cta: '予約する' },
     hero: { badge: '少人数ツアー · タイ・チェンマイ', title1: 'チェンマイを発見しよう', title2: '地元の人のように', sub: '経験豊富なガイド。少人数グループ。一生忘れられない体験。', btn1: 'ツアーを探す', btn2: '仕組みを知る' },
     stats: [{ n: '+800', label: '満足したお客様' }, { n: '8', label: '厳選ツアー' }, { n: '10年', label: '豊富な経験' }, { n: '4.9 ★', label: '平均評価' }],
     tours: { title: '私たちのツアー', sub: '年間を通じて定期出発。1グループ最大12名。', difficulty: '難易度', includes: '含まれるもの', pickDate: '日付を選択', spots: '空き', fewSpots: '残り{n}席！', from: '料金', perPerson: '1名', nextDates: '次回出発:', details: '詳細を見る', easy: '簡単', moderate: '普通', chooseTour: 'ツアーを選択...', notSure: 'まだ決まっていません' },
@@ -132,7 +132,7 @@ const i18n = {
     footer: 'タイでの責任ある旅行 · 許可番号 0000',
   },
   ko: {
-    nav: { destinations: '여행지', about: '소개', reviews: '후기', contact: '문의', cta: '예약하기' },
+    nav: { destinations: '여행지', about: '소개', reviews: '후기', contact: '문의', location: '오시는 길', cta: '예약하기' },
     hero: { badge: '소규모 투어 · 태국 치앙마이', title1: '치앙마이를 발견하세요', title2: '현지인처럼', sub: '전문 가이드. 소규모 그룹. 절대 잊을 수 없는 경험.', btn1: '투어 둘러보기', btn2: '이용 방법' },
     stats: [{ n: '+800', label: '만족한 여행자' }, { n: '8', label: '엄선된 투어' }, { n: '10년', label: '풍부한 경험' }, { n: '4.9 ★', label: '평균 평점' }],
     tours: { title: '투어 소개', sub: '연중 정기 출발. 그룹당 최대 12명.', difficulty: '난이도', includes: '포함 사항', pickDate: '날짜 선택', spots: '자리', fewSpots: '{n}자리 남음!', from: '시작가', perPerson: '1인', nextDates: '다음 출발:', details: '자세히 보기', easy: '쉬움', moderate: '보통', chooseTour: '투어 선택...', notSure: '아직 모르겠어요' },
@@ -147,7 +147,7 @@ const i18n = {
     footer: '태국의 책임 있는 관광 · 허가 번호 0000',
   },
   th: {
-    nav: { destinations: 'จุดหมาย', about: 'เกี่ยวกับเรา', reviews: 'รีวิว', contact: 'ติดต่อ', cta: 'จองเลย' },
+    nav: { destinations: 'จุดหมาย', about: 'เกี่ยวกับเรา', reviews: 'รีวิว', contact: 'ติดต่อ', location: 'หาเราได้ที่', cta: 'จองเลย' },
     hero: { badge: 'ทัวร์กลุ่มเล็ก · เชียงใหม่ ประเทศไทย', title1: 'ค้นพบเชียงใหม่', title2: 'แบบคนท้องถิ่น', sub: 'ไกด์ผู้เชี่ยวชาญ กลุ่มเล็ก ประสบการณ์ที่คุณจะไม่มีวันลืม', btn1: 'สำรวจทัวร์', btn2: 'วิธีการทำงาน' },
     stats: [{ n: '+800', label: 'นักท่องเที่ยวที่พึงพอใจ' }, { n: '8', label: 'ทัวร์คัดสรร' }, { n: '10 ปี', label: 'ประสบการณ์' }, { n: '4.9 ★', label: 'คะแนนเฉลี่ย' }],
     tours: { title: 'ทัวร์ของเรา', sub: 'ออกเดินทางตลอดปี สูงสุด 12 คนต่อกลุ่ม', difficulty: 'ความยาก', includes: 'รวมอยู่แล้ว', pickDate: 'เลือกวันที่', spots: 'ที่นั่ง', fewSpots: 'เหลือเพียง {n} ที่!', from: 'เริ่มต้น', perPerson: 'ต่อคน', nextDates: 'วันออกเดินทางถัดไป:', details: 'ดูรายละเอียด', easy: 'ง่าย', moderate: 'ปานกลาง', chooseTour: 'เลือกทัวร์...', notSure: 'ยังไม่แน่ใจ' },
@@ -738,6 +738,7 @@ export default function ToursPage() {
             <a href="#about" className="hover:text-amber-600 transition-colors">{t.nav.about}</a>
             <a href="#reviews" className="hover:text-amber-600 transition-colors">{t.nav.reviews}</a>
             <a href="#contact" className="hover:text-amber-600 transition-colors">{t.nav.contact}</a>
+            <a href="#location" className="hover:text-amber-600 transition-colors">{t.nav.location}</a>
           </div>
 
           <div className="flex items-center gap-3">
@@ -1008,7 +1009,7 @@ export default function ToursPage() {
       </section>
 
       {/* ── WHERE TO FIND US ─────────────────────────────────────── */}
-      <section className="py-24" style={{ background: '#1A1208' }}>
+      <section id="location" className="py-24" style={{ background: '#1A1208' }}>
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-14">
             <h2 className="text-4xl md:text-5xl font-black mb-4 text-white">{t.location.title}</h2>
