@@ -604,8 +604,8 @@ function WhySection({ t }: { t: typeof i18n['en'] }) {
           <div className="space-y-5">
             {t.why.items.map(item => (
               <div key={item.title} className="flex gap-4">
-                <div className="w-9 h-9 rounded-xl flex items-center justify-center shrink-0 mt-0.5" style={{ background: 'rgba(232,134,42,0.12)' }}>
-                  <div className="w-2 h-2 rounded-full" style={{ background: '#E8862A' }} />
+                <div className="w-9 h-9 rounded-xl flex items-center justify-center shrink-0 mt-0.5" style={{ background: 'rgba(34,197,94,0.12)' }}>
+                  <svg className="w-5 h-5" viewBox="0 0 20 20" fill="none" stroke="#16a34a" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><polyline points="4,10 8,14 16,6"/></svg>
                 </div>
                 <div>
                   <div className="font-bold mb-0.5" style={{ color: '#1A1208' }}>{item.title}</div>
