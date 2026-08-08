@@ -106,7 +106,7 @@ const tours = [
       es: ['Contacto ético con elefantes rescatados', 'Alimentarlos y bañarlos en el río', 'Almuerzo tailandés tradicional incluido', 'Máximo 10 personas por grupo'],
     },
     images: [
-      'https://images.unsplash.com/photo-1474511320723-9a56873867b5?w=800&q=85&auto=format&fit=crop',
+      '/elephant-sanctuary.jpg',
       'https://images.unsplash.com/photo-1564760055775-d63b17a55c44?w=800&q=85&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1516426122078-c23e76319801?w=800&q=85&auto=format&fit=crop',
     ],
@@ -142,7 +142,7 @@ const tours = [
       es: ['Cumbre a 2.565m — la más alta de Tailandia', 'Dos magníficos chedis reales', 'Cascadas Napahaeo y Sirithan', 'Visita al mercado Hmong'],
     },
     images: [
-      'https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=800&q=85&auto=format&fit=crop',
+      'https://www.thainationalparks.com/img/poi/2019/12/10/394801/two-chedis-w-900.jpg',
       'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=85&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1551632811-561732d1e306?w=800&q=85&auto=format&fit=crop',
     ],
