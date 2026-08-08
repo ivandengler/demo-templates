@@ -178,7 +178,7 @@ const tours = [
       es: ['Wat Rong Khun (Templo Blanco)', 'Wat Rong Suea Ten (Templo Azul)', 'Museo Baan Dam', 'Aldea de tribus del Doi Tung'],
     },
     images: [
-      'https://images.unsplash.com/photo-1563492065599-3520f775eeed?w=800&q=85&auto=format&fit=crop',
+      '/white-temple.jpg',
       'https://images.unsplash.com/photo-1534008757030-27299c4371b6?w=800&q=85&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=85&auto=format&fit=crop',
     ],
