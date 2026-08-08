@@ -23,6 +23,7 @@ const i18n = {
     why: { title: 'Why travel with us', sub: "We're not a mass-market agency. We're a team of passionate guides who craft every itinerary as if we were going ourselves.", items: [{ title: 'Small groups always', desc: 'Max 12 people. More attention, less noise, better experience.' }, { title: 'Certified local guides', desc: 'All our guides are licensed and have years in the field.' }, { title: 'Unmissable moments', desc: 'We arrive early, stay later. The best shots are from our tours.' }, { title: 'Transparent pricing', desc: 'The price includes everything we say. No hidden fees, ever.' }] },
     testimonials: { title: 'What our travellers say' },
     contact: { title: 'Ready to go?', sub: "Fill in the form and we'll reply within 24 hours with everything you need.", noPayment: 'No payment required now. We confirm your spot via WhatsApp.' },
+    location: { title: 'Where to Find Us', sub: 'Come visit us in person — we love meeting future travellers and helping plan the perfect Chiang Mai adventure.', address: 'Chiang Mai, Thailand', hours: 'Open daily · 8:00 – 20:00', directions: 'Get Directions' },
     footer: 'Responsible tourism in Thailand · License No. 0000',
   },
   es: {
@@ -37,6 +38,7 @@ const i18n = {
     why: { title: 'Por qué viajar con nosotros', sub: 'No somos una agencia masiva. Somos un equipo apasionado que arma cada viaje con el mismo cuidado con el que lo haríamos para nosotros.', items: [{ title: 'Grupos pequeños siempre', desc: 'Máximo 12 personas. Más atención, menos ruido, mejor experiencia.' }, { title: 'Guías locales certificados', desc: 'Todos nuestros guías tienen licencia y años de experiencia en el terreno.' }, { title: 'Momentos únicos', desc: 'Llegamos temprano, nos quedamos más. Las mejores fotos son de nuestros tours.' }, { title: 'Precios transparentes', desc: 'El precio incluye todo lo que decimos. Sin costos ocultos.' }] },
     testimonials: { title: 'Lo que dicen nuestros viajeros' },
     contact: { title: '¿Listo para partir?', sub: 'Completá el formulario y te respondemos en menos de 24 horas con toda la información.', noPayment: 'No se realiza ningún pago ahora. Confirmamos tu lugar por WhatsApp.' },
+    location: { title: 'Dónde encontrarnos', sub: 'Vení a visitarnos en persona — nos encanta conocer a los viajeros y ayudar a planear la aventura perfecta en Chiang Mai.', address: 'Chiang Mai, Tailandia', hours: 'Abierto todos los días · 8:00 – 20:00', directions: 'Cómo llegar' },
     footer: 'Turismo responsable en Tailandia · Legajo Nº 0000',
   },
   de: {
@@ -51,6 +53,7 @@ const i18n = {
     why: { title: 'Warum mit uns reisen', sub: 'Wir sind keine Massentourismusagentur. Wir sind ein leidenschaftliches Team, das jede Reiseroute so sorgfältig plant, als würden wir selbst mitfahren.', items: [{ title: 'Immer kleine Gruppen', desc: 'Max. 12 Personen. Mehr Aufmerksamkeit, weniger Lärm, besseres Erlebnis.' }, { title: 'Zertifizierte lokale Guides', desc: 'Alle unsere Guides sind lizenziert und haben jahrelange Felderfahrung.' }, { title: 'Unvergessliche Momente', desc: 'Wir kommen früh, bleiben länger. Die besten Fotos entstehen bei unseren Touren.' }, { title: 'Transparente Preise', desc: 'Der Preis beinhaltet alles, was wir versprechen. Keine versteckten Kosten.' }] },
     testimonials: { title: 'Was unsere Reisenden sagen' },
     contact: { title: 'Bereit loszulegen?', sub: 'Füllen Sie das Formular aus und wir antworten innerhalb von 24 Stunden.', noPayment: 'Keine Zahlung jetzt erforderlich. Wir bestätigen Ihren Platz per WhatsApp.' },
+    location: { title: 'Wo Sie uns finden', sub: 'Besuchen Sie uns persönlich — wir freuen uns, zukünftige Reisende kennenzulernen und das perfekte Chiang-Mai-Abenteuer zu planen.', address: 'Chiang Mai, Thailand', hours: 'Täglich geöffnet · 8:00 – 20:00', directions: 'Route berechnen' },
     footer: 'Verantwortungsvoller Tourismus in Thailand · Lizenz Nr. 0000',
   },
   pt: {
@@ -65,6 +68,7 @@ const i18n = {
     why: { title: 'Por que viajar conosco', sub: 'Não somos uma agência de massa. Somos uma equipe apaixonada que elabora cada roteiro como se fôssemos nós mesmos viajar.', items: [{ title: 'Grupos pequenos sempre', desc: 'Máx. 12 pessoas. Mais atenção, menos barulho, melhor experiência.' }, { title: 'Guias locais certificados', desc: 'Todos os nossos guias são licenciados e têm anos de experiência.' }, { title: 'Momentos inesquecíveis', desc: 'Chegamos cedo, ficamos mais. As melhores fotos são dos nossos tours.' }, { title: 'Preços transparentes', desc: 'O preço inclui tudo que prometemos. Sem taxas ocultas.' }] },
     testimonials: { title: 'O que nossos viajantes dizem' },
     contact: { title: 'Pronto para partir?', sub: 'Preencha o formulário e respondemos em até 24 horas com tudo que você precisa.', noPayment: 'Nenhum pagamento necessário agora. Confirmamos seu lugar pelo WhatsApp.' },
+    location: { title: 'Onde nos encontrar', sub: 'Venha nos visitar pessoalmente — adoramos conhecer futuros viajantes e ajudar a planejar a aventura perfeita em Chiang Mai.', address: 'Chiang Mai, Tailândia', hours: 'Aberto todos os dias · 8:00 – 20:00', directions: 'Como chegar' },
     footer: 'Turismo responsável na Tailândia · Licença Nº 0000',
   },
   it: {
@@ -79,6 +83,7 @@ const i18n = {
     why: { title: 'Perché viaggiare con noi', sub: "Non siamo un'agenzia di massa. Siamo un team appassionato che crea ogni itinerario come se lo facessimo per noi stessi.", items: [{ title: 'Sempre gruppi piccoli', desc: 'Max 12 persone. Più attenzione, meno caos, esperienza migliore.' }, { title: 'Guide locali certificate', desc: 'Tutte le nostre guide sono autorizzate e hanno anni di esperienza sul campo.' }, { title: 'Momenti imperdibili', desc: 'Arriviamo presto, restiamo di più. Le foto migliori vengono dai nostri tour.' }, { title: 'Prezzi trasparenti', desc: 'Il prezzo include tutto ciò che diciamo. Nessun costo nascosto.' }] },
     testimonials: { title: 'Cosa dicono i nostri viaggiatori' },
     contact: { title: 'Pronto a partire?', sub: 'Compila il modulo e ti risponderemo entro 24 ore con tutto ciò di cui hai bisogno.', noPayment: 'Nessun pagamento richiesto ora. Confermiamo il tuo posto via WhatsApp.' },
+    location: { title: 'Dove trovarci', sub: 'Vieni a trovarci di persona — amiamo incontrare i futuri viaggiatori e aiutare a pianificare la perfetta avventura a Chiang Mai.', address: 'Chiang Mai, Thailandia', hours: 'Aperto tutti i giorni · 8:00 – 20:00', directions: 'Indicazioni stradali' },
     footer: 'Turismo responsabile in Thailandia · Licenza N. 0000',
   },
   ru: {
@@ -93,6 +98,7 @@ const i18n = {
     why: { title: 'Почему выбирают нас', sub: 'Мы не массовое агентство. Мы команда увлечённых гидов, которые создают каждый маршрут так, будто едут сами.', items: [{ title: 'Только малые группы', desc: 'Макс. 12 человек. Больше внимания, меньше суеты, лучше впечатления.' }, { title: 'Сертифицированные местные гиды', desc: 'Все наши гиды лицензированы и имеют многолетний опыт работы.' }, { title: 'Незабываемые моменты', desc: 'Мы приезжаем раньше, уходим позже. Лучшие фото — с наших туров.' }, { title: 'Прозрачные цены', desc: 'Цена включает всё, что мы обещаем. Никаких скрытых платежей.' }] },
     testimonials: { title: 'Что говорят наши путешественники' },
     contact: { title: 'Готовы отправиться?', sub: 'Заполните форму и мы ответим в течение 24 часов со всей необходимой информацией.', noPayment: 'Оплата сейчас не требуется. Мы подтверждаем место через WhatsApp.' },
+    location: { title: 'Где нас найти', sub: 'Приходите к нам лично — мы с радостью познакомимся с будущими путешественниками и поможем спланировать идеальное приключение в Чиангмае.', address: 'Чиангмай, Таиланд', hours: 'Открыто ежедневно · 8:00 – 20:00', directions: 'Построить маршрут' },
     footer: 'Ответственный туризм в Таиланде · Лицензия № 0000',
   },
   zh: {
@@ -107,6 +113,7 @@ const i18n = {
     why: { title: '为什么选择我们', sub: '我们不是大众旅行社。我们是一支充满热情的导游团队，每条路线都像是为自己设计的。', items: [{ title: '始终小团游', desc: '最多12人。更多关注，更少噪音，更好的体验。' }, { title: '持证本地导游', desc: '我们所有导游都持有执照并拥有多年实地经验。' }, { title: '难忘的瞬间', desc: '我们早到晚走。最好的照片来自我们的行程。' }, { title: '透明定价', desc: '价格包含我们承诺的一切。从不收取隐藏费用。' }] },
     testimonials: { title: '旅客的评价' },
     contact: { title: '准备出发了吗?', sub: '填写表格，我们将在24小时内回复您所需的一切信息。', noPayment: '现在无需付款。我们通过WhatsApp确认您的名额。' },
+    location: { title: '在哪里找到我们', sub: '欢迎亲自来访 — 我们很乐意与未来的旅行者见面，帮助规划完美的清迈之旅。', address: '泰国清迈', hours: '每天开放 · 8:00 – 20:00', directions: '获取路线' },
     footer: '泰国负责任旅游 · 许可证编号 0000',
   },
   ja: {
@@ -121,6 +128,7 @@ const i18n = {
     why: { title: '私たちと旅する理由', sub: '私たちは大手旅行会社ではありません。情熱的なガイドのチームが、まるで自分たちが旅するかのように一つひとつの旅程を作り上げています。', items: [{ title: '常に少人数グループ', desc: '最大12名。より多くの配慮、より少ない混雑、より良い体験。' }, { title: '認定地元ガイド', desc: '全てのガイドはライセンスを持ち、現場での豊富な経験があります。' }, { title: '忘れられない瞬間', desc: '早く到着し、長く滞在。最高の写真は私たちのツアーから生まれます。' }, { title: '透明な料金', desc: '料金には私たちが約束するすべてが含まれています。隠れた費用は一切ありません。' }] },
     testimonials: { title: '旅行者の声' },
     contact: { title: '出発の準備はできましたか?', sub: 'フォームに記入していただければ、24時間以内に必要な情報をお送りします。', noPayment: '今すぐお支払いは不要です。WhatsAppでお席を確認いたします。' },
+    location: { title: '私たちの場所', sub: '直接ご来店ください — これからの旅行者との出会いを大切にし、最高のチェンマイ体験を一緒に計画します。', address: 'タイ・チェンマイ', hours: '毎日営業 · 8:00 – 20:00', directions: '経路を表示' },
     footer: 'タイでの責任ある旅行 · 許可番号 0000',
   },
   ko: {
@@ -135,6 +143,7 @@ const i18n = {
     why: { title: '왜 우리와 함께 여행하나요', sub: '우리는 대형 여행사가 아닙니다. 마치 직접 여행하는 것처럼 모든 여정을 정성껏 만드는 열정적인 가이드 팀입니다.', items: [{ title: '항상 소규모 그룹', desc: '최대 12명. 더 많은 관심, 더 적은 소음, 더 나은 경험.' }, { title: '공인 현지 가이드', desc: '모든 가이드는 자격증을 보유하고 현장 경험이 풍부합니다.' }, { title: '놓칠 수 없는 순간', desc: '일찍 도착하고 오래 머뭅니다. 최고의 사진은 우리 투어에서 나옵니다.' }, { title: '투명한 가격', desc: '가격에는 약속한 모든 것이 포함됩니다. 숨겨진 비용은 없습니다.' }] },
     testimonials: { title: '여행자들의 후기' },
     contact: { title: '출발 준비가 되셨나요?', sub: '양식을 작성해 주시면 24시간 이내에 필요한 모든 정보를 알려드리겠습니다.', noPayment: '지금 결제할 필요 없습니다. WhatsApp으로 자리를 확인해 드립니다.' },
+    location: { title: '찾아오시는 길', sub: '직접 방문해 주세요 — 미래의 여행자를 만나고 완벽한 치앙마이 여행을 함께 계획하는 것을 좋아합니다.', address: '태국 치앙마이', hours: '매일 운영 · 8:00 – 20:00', directions: '길 찾기' },
     footer: '태국의 책임 있는 관광 · 허가 번호 0000',
   },
   th: {
@@ -149,6 +158,7 @@ const i18n = {
     why: { title: 'ทำไมต้องเดินทางกับเรา', sub: 'เราไม่ใช่บริษัทนำเที่ยวแบบมวลชน เราคือทีมไกด์ที่มีความหลงใหล ที่ออกแบบทุกเส้นทางราวกับว่าเราเองกำลังเดินทาง', items: [{ title: 'กลุ่มเล็กเสมอ', desc: 'สูงสุด 12 คน ใส่ใจมากขึ้น เสียงรบกวนน้อยลง ประสบการณ์ดีขึ้น' }, { title: 'ไกด์ท้องถิ่นที่มีใบรับรอง', desc: 'ไกด์ทุกคนมีใบอนุญาตและมีประสบการณ์ภาคสนามหลายปี' }, { title: 'ช่วงเวลาที่ไม่ควรพลาด', desc: 'เราไปถึงก่อนและอยู่นานขึ้น ภาพถ่ายที่ดีที่สุดมาจากทัวร์ของเรา' }, { title: 'ราคาโปร่งใส', desc: 'ราคารวมทุกอย่างที่เราบอก ไม่มีค่าใช้จ่ายซ่อนเร้น' }] },
     testimonials: { title: 'สิ่งที่นักท่องเที่ยวของเราพูด' },
     contact: { title: 'พร้อมออกเดินทางแล้วหรือยัง?', sub: 'กรอกแบบฟอร์มแล้วเราจะตอบกลับภายใน 24 ชั่วโมงพร้อมข้อมูลทั้งหมดที่คุณต้องการ', noPayment: 'ไม่ต้องชำระเงินตอนนี้ เราจะยืนยันที่นั่งผ่าน WhatsApp' },
+    location: { title: 'มาหาเราได้ที่ไหน', sub: 'แวะมาเยี่ยมเราได้เลย — เรายินดีพบปะนักเดินทางในอนาคตและช่วยวางแผนการผจญภัยที่เชียงใหม่', address: 'เชียงใหม่ ประเทศไทย', hours: 'เปิดทุกวัน · 8:00 – 20:00', directions: 'เส้นทาง' },
     footer: 'การท่องเที่ยวอย่างรับผิดชอบในประเทศไทย · ใบอนุญาตเลขที่ 0000',
   },
 }
@@ -993,6 +1003,70 @@ export default function ToursPage() {
             <a href="#" className="flex items-center gap-2 hover:text-amber-600 transition-colors"><Phone size={15} />+66 81 000 0000</a>
             <a href="#" className="flex items-center gap-2 hover:text-amber-600 transition-colors"><Share2 size={15} />@lotusrailstrails</a>
             <a href="#" className="flex items-center gap-2 hover:text-amber-600 transition-colors"><Mail size={15} />hello@lotusrails.com</a>
+          </div>
+        </div>
+      </section>
+
+      {/* ── WHERE TO FIND US ─────────────────────────────────────── */}
+      <section className="py-24" style={{ background: '#1A1208' }}>
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-14">
+            <h2 className="text-4xl md:text-5xl font-black mb-4 text-white">{t.location.title}</h2>
+            <p className="text-lg max-w-2xl mx-auto" style={{ color: 'rgba(255,255,255,0.6)' }}>{t.location.sub}</p>
+          </div>
+          <div className="grid md:grid-cols-5 gap-8 items-stretch">
+            {/* Info card */}
+            <div className="md:col-span-2 flex flex-col gap-5">
+              <div className="rounded-2xl p-6 flex-1 flex flex-col justify-between" style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(232,134,42,0.2)' }}>
+                <div>
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style={{ background: 'rgba(232,134,42,0.15)' }}>
+                      <MapPin size={20} style={{ color: '#E8862A' }} />
+                    </div>
+                    <div>
+                      <div className="font-bold text-white text-lg">Chiang Mai Personal Tour</div>
+                      <div className="text-sm" style={{ color: 'rgba(255,255,255,0.5)' }}>{t.location.address}</div>
+                    </div>
+                  </div>
+                  <div className="space-y-4 mb-8">
+                    <div className="flex items-center gap-3" style={{ color: 'rgba(255,255,255,0.7)' }}>
+                      <Clock size={16} style={{ color: '#E8862A' }} className="shrink-0" />
+                      <span className="text-sm">{t.location.hours}</span>
+                    </div>
+                    <div className="flex items-center gap-3" style={{ color: 'rgba(255,255,255,0.7)' }}>
+                      <Phone size={16} style={{ color: '#E8862A' }} className="shrink-0" />
+                      <span className="text-sm">+66 81 000 0000</span>
+                    </div>
+                    <div className="flex items-center gap-3" style={{ color: 'rgba(255,255,255,0.7)' }}>
+                      <Share2 size={16} style={{ color: '#E8862A' }} className="shrink-0" />
+                      <span className="text-sm">@chiangmaipersonaltour</span>
+                    </div>
+                  </div>
+                </div>
+                <a
+                  href="https://www.google.com/maps?ll=18.78759,98.981862&z=21&t=m&cid=3266517734617428796"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 w-full font-bold py-3 rounded-xl text-white transition-opacity hover:opacity-80"
+                  style={{ background: '#E8862A' }}
+                >
+                  <MapPin size={16} />
+                  {t.location.directions}
+                </a>
+              </div>
+            </div>
+            {/* Map */}
+            <div className="md:col-span-3 rounded-2xl overflow-hidden" style={{ minHeight: 380, border: '1px solid rgba(232,134,42,0.2)' }}>
+              <iframe
+                src="https://maps.google.com/maps?q=18.78759,98.981862&z=18&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0, display: 'block', minHeight: 380 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
           </div>
         </div>
       </section>
