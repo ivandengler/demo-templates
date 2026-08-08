@@ -549,15 +549,24 @@ export default function ToursPage() {
       {/* ── TESTIMONIALS ─────────────────────────────────────────── */}
       <section id="reviews" className="py-24 px-4">
         <div className="max-w-5xl mx-auto">
-          <div className="flex items-center justify-center gap-3 mb-6">
+          <div className="flex flex-col items-center mb-8">
+            <div className="flex items-center gap-2 mb-2">
+              <svg width="36" height="34" viewBox="0 0 55 52" fill="none">
+                <path d="M27.5 0L33.85 20.22H55L38.08 32.72L44.43 52.9L27.5 40.4L10.57 52.9L16.92 32.72L0 20.22H21.15L27.5 0Z" fill="#00B67A"/>
+                <path d="M39.4 37.1L37.75 31.8L27.5 40.4L39.4 37.1Z" fill="#005128"/>
+              </svg>
+              <span style={{ fontFamily: 'Arial Black, Arial, sans-serif', fontWeight: 900, fontSize: 28, color: '#191919', letterSpacing: '-0.5px' }}>Trustpilot</span>
+            </div>
             <div className="flex items-center gap-1">
               {[...Array(5)].map((_, i) => (
-                <svg key={i} width="22" height="22" viewBox="0 0 24 24" fill="#00B67A"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <div key={i} style={{ background: '#00B67A', borderRadius: 5, width: 42, height: 42, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <svg width="26" height="26" viewBox="0 0 55 52" fill="none">
+                    <path d="M27.5 0L33.85 20.22H55L38.08 32.72L44.43 52.9L27.5 40.4L10.57 52.9L16.92 32.72L0 20.22H21.15L27.5 0Z" fill="white"/>
+                    <path d="M39.4 37.1L37.75 31.8L27.5 40.4L39.4 37.1Z" fill="rgba(0,0,0,0.15)"/>
+                  </svg>
+                </div>
               ))}
             </div>
-            <span className="font-bold text-sm" style={{ color: '#1A1208' }}>5.0 Excellent</span>
-            <span style={{ color: '#A06030' }}>·</span>
-            <span className="font-black text-lg tracking-tight" style={{ color: '#00B67A' }}>Trustpilot</span>
           </div>
           <h2 className="text-4xl font-black text-center mb-16" style={{ color: '#1A1208' }}>{t.testimonials.title}</h2>
           <div className="grid md:grid-cols-3 gap-6">
