@@ -13,71 +13,143 @@ import {
 const i18n = {
   en: {
     nav: { destinations: 'Destinations', about: 'About Us', reviews: 'Reviews', contact: 'Contact', cta: 'Book Now' },
-    hero: {
-      badge: 'Small-group tours · Chiang Mai, Thailand',
-      title1: 'Discover Chiang Mai',
-      title2: 'like a local',
-      sub: 'Expert guides. Tiny groups. Experiences you will never forget.',
-      btn1: 'Explore tours',
-      btn2: 'How it works',
-    },
-    stats: [
-      { n: '+800', label: 'Happy travellers' },
-      { n: '8', label: 'Curated tours' },
-      { n: '10 yrs', label: 'Of experience' },
-      { n: '4.9 ★', label: 'Average rating' },
-    ],
-    tours: { title: 'Our tours', sub: 'Scheduled departures year-round. Max 12 people per group.', difficulty: 'Difficulty', includes: 'Included', pickDate: 'Choose your date', spots: 'spots', fewSpots: 'Only {n} left!', from: 'from', perPerson: 'per person', nextDates: 'Next departures:', details: 'See details', easy: 'Easy', moderate: 'Moderate', },
+    hero: { badge: 'Small-group tours · Chiang Mai, Thailand', title1: 'Discover Chiang Mai', title2: 'like a local', sub: 'Expert guides. Tiny groups. Experiences you will never forget.', btn1: 'Explore tours', btn2: 'How it works' },
+    stats: [{ n: '+800', label: 'Happy travellers' }, { n: '8', label: 'Curated tours' }, { n: '10 yrs', label: 'Of experience' }, { n: '4.9 ★', label: 'Average rating' }],
+    tours: { title: 'Our tours', sub: 'Scheduled departures year-round. Max 12 people per group.', difficulty: 'Difficulty', includes: 'Included', pickDate: 'Choose your date', spots: 'spots', fewSpots: 'Only {n} left!', from: 'from', perPerson: 'per person', nextDates: 'Next departures:', details: 'See details', easy: 'Easy', moderate: 'Moderate', chooseTour: 'Choose a tour...', notSure: "I'm not sure yet" },
     modal: { people: 'Number of people', total: 'Total', reserve: 'Pre-book this tour', selectFirst: 'Select a date to continue', back: 'Back' },
     form: { name: 'Full name', whatsapp: 'WhatsApp / Phone', email: 'Email', dest: 'Which tour interests you?', msg: 'Message (optional)', msgPlaceholder: 'Any questions or special needs?', submit: 'Send enquiry', namePh: 'Your name', emailPh: 'you@email.com' },
+    payment: { title: 'Complete your payment', total: 'Total to pay', cardNumber: 'Card number', expiry: 'Expiry', secure: 'Secure payment · SSL encrypted', pay: 'Pay', persons: (n: number) => `${n} person${n > 1 ? 's' : ''}` },
     done: { title: 'Pre-booking sent!', tour: 'Tour:', date: 'Date:', body: 'We will contact you via WhatsApp within 2 hours to confirm your spot.', close: 'Close' },
-    why: {
-      title: 'Why travel with us',
-      sub: "We're not a mass-market agency. We're a team of passionate guides who craft every itinerary as if we were going ourselves.",
-      items: [
-        { title: 'Small groups always', desc: 'Max 12 people. More attention, less noise, better experience.' },
-        { title: 'Certified local guides', desc: 'All our guides are licensed and have years in the field.' },
-        { title: 'Unmissable moments', desc: "We arrive early, stay later. The best shots are from our tours." },
-        { title: 'Transparent pricing', desc: 'The price includes everything we say. No hidden fees, ever.' },
-      ],
-    },
+    why: { title: 'Why travel with us', sub: "We're not a mass-market agency. We're a team of passionate guides who craft every itinerary as if we were going ourselves.", items: [{ title: 'Small groups always', desc: 'Max 12 people. More attention, less noise, better experience.' }, { title: 'Certified local guides', desc: 'All our guides are licensed and have years in the field.' }, { title: 'Unmissable moments', desc: 'We arrive early, stay later. The best shots are from our tours.' }, { title: 'Transparent pricing', desc: 'The price includes everything we say. No hidden fees, ever.' }] },
     testimonials: { title: 'What our travellers say' },
-    contact: { title: 'Ready to go?', sub: 'Fill in the form and we\'ll reply within 24 hours with everything you need.', noPayment: 'No payment required now. We confirm your spot via WhatsApp.' },
+    contact: { title: 'Ready to go?', sub: "Fill in the form and we'll reply within 24 hours with everything you need.", noPayment: 'No payment required now. We confirm your spot via WhatsApp.' },
     footer: 'Responsible tourism in Thailand · License No. 0000',
   },
   es: {
     nav: { destinations: 'Destinos', about: 'Nosotros', reviews: 'Opiniones', contact: 'Contacto', cta: 'Reservar' },
-    hero: {
-      badge: 'Tours en grupos pequeños · Chiang Mai, Tailandia',
-      title1: 'Descubrí Chiang Mai',
-      title2: 'como un local',
-      sub: 'Guías expertos. Grupos reducidos. Experiencias que no vas a olvidar.',
-      btn1: 'Ver tours',
-      btn2: 'Cómo funciona',
-    },
-    stats: [
-      { n: '+800', label: 'Viajeros felices' },
-      { n: '8', label: 'Tours únicos' },
-      { n: '10 años', label: 'De experiencia' },
-      { n: '4.9 ★', label: 'Calificación promedio' },
-    ],
-    tours: { title: 'Nuestros tours', sub: 'Salidas programadas todo el año. Máximo 12 personas por grupo.', difficulty: 'Dificultad', includes: 'Incluye', pickDate: 'Elegí tu fecha', spots: 'lugares', fewSpots: '¡Solo {n} lugares!', from: 'desde', perPerson: 'por persona', nextDates: 'Próximas salidas:', details: 'Ver detalles', easy: 'Fácil', moderate: 'Moderado', },
+    hero: { badge: 'Tours en grupos pequeños · Chiang Mai, Tailandia', title1: 'Descubrí Chiang Mai', title2: 'como un local', sub: 'Guías expertos. Grupos reducidos. Experiencias que no vas a olvidar.', btn1: 'Ver tours', btn2: 'Cómo funciona' },
+    stats: [{ n: '+800', label: 'Viajeros felices' }, { n: '8', label: 'Tours únicos' }, { n: '10 años', label: 'De experiencia' }, { n: '4.9 ★', label: 'Calificación promedio' }],
+    tours: { title: 'Nuestros tours', sub: 'Salidas programadas todo el año. Máximo 12 personas por grupo.', difficulty: 'Dificultad', includes: 'Incluye', pickDate: 'Elegí tu fecha', spots: 'lugares', fewSpots: '¡Solo {n} lugares!', from: 'desde', perPerson: 'por persona', nextDates: 'Próximas salidas:', details: 'Ver detalles', easy: 'Fácil', moderate: 'Moderado', chooseTour: 'Elegir tour...', notSure: 'No sé todavía' },
     modal: { people: 'Cantidad de personas', total: 'Total', reserve: 'Pre-reservar este tour', selectFirst: 'Elegí una fecha para continuar', back: 'Volver' },
     form: { name: 'Nombre y apellido', whatsapp: 'WhatsApp / Teléfono', email: 'Email', dest: '¿Qué tour te interesa?', msg: 'Mensaje (opcional)', msgPlaceholder: '¿Alguna pregunta o necesidad especial?', submit: 'Enviar consulta', namePh: 'Tu nombre', emailPh: 'tu@email.com' },
+    payment: { title: 'Completá tu pago', total: 'Total a pagar', cardNumber: 'Número de tarjeta', expiry: 'Vencimiento', secure: 'Pago seguro · Cifrado SSL', pay: 'Pagar', persons: (n: number) => `${n} persona${n > 1 ? 's' : ''}` },
     done: { title: '¡Pre-reserva enviada!', tour: 'Tour:', date: 'Fecha:', body: 'Te contactamos por WhatsApp en menos de 2 horas para confirmar tu lugar.', close: 'Cerrar' },
-    why: {
-      title: 'Por qué viajar con nosotros',
-      sub: 'No somos una agencia masiva. Somos un equipo apasionado que arma cada viaje con el mismo cuidado con el que lo haríamos para nosotros.',
-      items: [
-        { title: 'Grupos pequeños siempre', desc: 'Máximo 12 personas. Más atención, menos ruido, mejor experiencia.' },
-        { title: 'Guías locales certificados', desc: 'Todos nuestros guías tienen licencia y años de experiencia en el terreno.' },
-        { title: 'Momentos únicos', desc: 'Llegamos temprano, nos quedamos más. Las mejores fotos son de nuestros tours.' },
-        { title: 'Precios transparentes', desc: 'El precio incluye todo lo que decimos. Sin costos ocultos.' },
-      ],
-    },
+    why: { title: 'Por qué viajar con nosotros', sub: 'No somos una agencia masiva. Somos un equipo apasionado que arma cada viaje con el mismo cuidado con el que lo haríamos para nosotros.', items: [{ title: 'Grupos pequeños siempre', desc: 'Máximo 12 personas. Más atención, menos ruido, mejor experiencia.' }, { title: 'Guías locales certificados', desc: 'Todos nuestros guías tienen licencia y años de experiencia en el terreno.' }, { title: 'Momentos únicos', desc: 'Llegamos temprano, nos quedamos más. Las mejores fotos son de nuestros tours.' }, { title: 'Precios transparentes', desc: 'El precio incluye todo lo que decimos. Sin costos ocultos.' }] },
     testimonials: { title: 'Lo que dicen nuestros viajeros' },
     contact: { title: '¿Listo para partir?', sub: 'Completá el formulario y te respondemos en menos de 24 horas con toda la información.', noPayment: 'No se realiza ningún pago ahora. Confirmamos tu lugar por WhatsApp.' },
     footer: 'Turismo responsable en Tailandia · Legajo Nº 0000',
+  },
+  de: {
+    nav: { destinations: 'Reiseziele', about: 'Über uns', reviews: 'Bewertungen', contact: 'Kontakt', cta: 'Jetzt buchen' },
+    hero: { badge: 'Kleine Gruppen · Chiang Mai, Thailand', title1: 'Entdecke Chiang Mai', title2: 'wie ein Einheimischer', sub: 'Erfahrene Guides. Kleine Gruppen. Erlebnisse, die du nie vergessen wirst.', btn1: 'Touren entdecken', btn2: 'Wie es funktioniert' },
+    stats: [{ n: '+800', label: 'Zufriedene Reisende' }, { n: '8', label: 'Kuratierte Touren' }, { n: '10 J.', label: 'Erfahrung' }, { n: '4.9 ★', label: 'Durchschnittsbewertung' }],
+    tours: { title: 'Unsere Touren', sub: 'Ganzjährige Abfahrten. Max. 12 Personen pro Gruppe.', difficulty: 'Schwierigkeit', includes: 'Inklusive', pickDate: 'Datum wählen', spots: 'Plätze', fewSpots: 'Nur noch {n}!', from: 'ab', perPerson: 'pro Person', nextDates: 'Nächste Abfahrten:', details: 'Details', easy: 'Einfach', moderate: 'Mittel', chooseTour: 'Tour wählen...', notSure: 'Ich bin noch unsicher' },
+    modal: { people: 'Personenanzahl', total: 'Gesamt', reserve: 'Tour vorbuchen', selectFirst: 'Datum wählen um fortzufahren', back: 'Zurück' },
+    form: { name: 'Vollständiger Name', whatsapp: 'WhatsApp / Telefon', email: 'E-Mail', dest: 'Welche Tour interessiert Sie?', msg: 'Nachricht (optional)', msgPlaceholder: 'Fragen oder besondere Wünsche?', submit: 'Anfrage senden', namePh: 'Ihr Name', emailPh: 'sie@email.de' },
+    payment: { title: 'Zahlung abschließen', total: 'Zu zahlender Betrag', cardNumber: 'Kartennummer', expiry: 'Ablaufdatum', secure: 'Sichere Zahlung · SSL-verschlüsselt', pay: 'Bezahlen', persons: (n: number) => `${n} Person${n > 1 ? 'en' : ''}` },
+    done: { title: 'Vorbuchung gesendet!', tour: 'Tour:', date: 'Datum:', body: 'Wir melden uns innerhalb von 2 Stunden via WhatsApp, um Ihren Platz zu bestätigen.', close: 'Schließen' },
+    why: { title: 'Warum mit uns reisen', sub: 'Wir sind keine Massentourismusagentur. Wir sind ein leidenschaftliches Team, das jede Reiseroute so sorgfältig plant, als würden wir selbst mitfahren.', items: [{ title: 'Immer kleine Gruppen', desc: 'Max. 12 Personen. Mehr Aufmerksamkeit, weniger Lärm, besseres Erlebnis.' }, { title: 'Zertifizierte lokale Guides', desc: 'Alle unsere Guides sind lizenziert und haben jahrelange Felderfahrung.' }, { title: 'Unvergessliche Momente', desc: 'Wir kommen früh, bleiben länger. Die besten Fotos entstehen bei unseren Touren.' }, { title: 'Transparente Preise', desc: 'Der Preis beinhaltet alles, was wir versprechen. Keine versteckten Kosten.' }] },
+    testimonials: { title: 'Was unsere Reisenden sagen' },
+    contact: { title: 'Bereit loszulegen?', sub: 'Füllen Sie das Formular aus und wir antworten innerhalb von 24 Stunden.', noPayment: 'Keine Zahlung jetzt erforderlich. Wir bestätigen Ihren Platz per WhatsApp.' },
+    footer: 'Verantwortungsvoller Tourismus in Thailand · Lizenz Nr. 0000',
+  },
+  pt: {
+    nav: { destinations: 'Destinos', about: 'Sobre nós', reviews: 'Avaliações', contact: 'Contato', cta: 'Reservar' },
+    hero: { badge: 'Tours em pequenos grupos · Chiang Mai, Tailândia', title1: 'Descubra Chiang Mai', title2: 'como um local', sub: 'Guias especializados. Grupos pequenos. Experiências que você nunca vai esquecer.', btn1: 'Explorar tours', btn2: 'Como funciona' },
+    stats: [{ n: '+800', label: 'Viajantes felizes' }, { n: '8', label: 'Tours selecionados' }, { n: '10 anos', label: 'De experiência' }, { n: '4.9 ★', label: 'Avaliação média' }],
+    tours: { title: 'Nossos tours', sub: 'Partidas programadas o ano todo. Máx. 12 pessoas por grupo.', difficulty: 'Dificuldade', includes: 'Incluído', pickDate: 'Escolha sua data', spots: 'vagas', fewSpots: 'Só {n} restantes!', from: 'a partir de', perPerson: 'por pessoa', nextDates: 'Próximas partidas:', details: 'Ver detalhes', easy: 'Fácil', moderate: 'Moderado', chooseTour: 'Escolha um tour...', notSure: 'Ainda não sei' },
+    modal: { people: 'Número de pessoas', total: 'Total', reserve: 'Pré-reservar este tour', selectFirst: 'Selecione uma data para continuar', back: 'Voltar' },
+    form: { name: 'Nome completo', whatsapp: 'WhatsApp / Telefone', email: 'E-mail', dest: 'Qual tour te interessa?', msg: 'Mensagem (opcional)', msgPlaceholder: 'Alguma dúvida ou necessidade especial?', submit: 'Enviar consulta', namePh: 'Seu nome', emailPh: 'voce@email.com' },
+    payment: { title: 'Conclua seu pagamento', total: 'Total a pagar', cardNumber: 'Número do cartão', expiry: 'Validade', secure: 'Pagamento seguro · Criptografia SSL', pay: 'Pagar', persons: (n: number) => `${n} pessoa${n > 1 ? 's' : ''}` },
+    done: { title: 'Pré-reserva enviada!', tour: 'Tour:', date: 'Data:', body: 'Entraremos em contato pelo WhatsApp em até 2 horas para confirmar seu lugar.', close: 'Fechar' },
+    why: { title: 'Por que viajar conosco', sub: 'Não somos uma agência de massa. Somos uma equipe apaixonada que elabora cada roteiro como se fôssemos nós mesmos viajar.', items: [{ title: 'Grupos pequenos sempre', desc: 'Máx. 12 pessoas. Mais atenção, menos barulho, melhor experiência.' }, { title: 'Guias locais certificados', desc: 'Todos os nossos guias são licenciados e têm anos de experiência.' }, { title: 'Momentos inesquecíveis', desc: 'Chegamos cedo, ficamos mais. As melhores fotos são dos nossos tours.' }, { title: 'Preços transparentes', desc: 'O preço inclui tudo que prometemos. Sem taxas ocultas.' }] },
+    testimonials: { title: 'O que nossos viajantes dizem' },
+    contact: { title: 'Pronto para partir?', sub: 'Preencha o formulário e respondemos em até 24 horas com tudo que você precisa.', noPayment: 'Nenhum pagamento necessário agora. Confirmamos seu lugar pelo WhatsApp.' },
+    footer: 'Turismo responsável na Tailândia · Licença Nº 0000',
+  },
+  it: {
+    nav: { destinations: 'Destinazioni', about: 'Chi siamo', reviews: 'Recensioni', contact: 'Contatti', cta: 'Prenota ora' },
+    hero: { badge: 'Tour in piccoli gruppi · Chiang Mai, Thailandia', title1: 'Scopri Chiang Mai', title2: 'come un locale', sub: 'Guide esperte. Gruppi piccoli. Esperienze che non dimenticherai mai.', btn1: 'Esplora i tour', btn2: 'Come funziona' },
+    stats: [{ n: '+800', label: 'Viaggiatori soddisfatti' }, { n: '8', label: 'Tour selezionati' }, { n: '10 anni', label: 'Di esperienza' }, { n: '4.9 ★', label: 'Valutazione media' }],
+    tours: { title: 'I nostri tour', sub: "Partenze programmate tutto l'anno. Max 12 persone per gruppo.", difficulty: 'Difficoltà', includes: 'Incluso', pickDate: 'Scegli la tua data', spots: 'posti', fewSpots: 'Solo {n} rimasti!', from: 'da', perPerson: 'a persona', nextDates: 'Prossime partenze:', details: 'Vedi dettagli', easy: 'Facile', moderate: 'Moderato', chooseTour: 'Scegli un tour...', notSure: 'Non sono ancora sicuro' },
+    modal: { people: 'Numero di persone', total: 'Totale', reserve: 'Pre-prenota questo tour', selectFirst: 'Seleziona una data per continuare', back: 'Indietro' },
+    form: { name: 'Nome completo', whatsapp: 'WhatsApp / Telefono', email: 'Email', dest: 'Quale tour ti interessa?', msg: 'Messaggio (opzionale)', msgPlaceholder: 'Domande o esigenze speciali?', submit: 'Invia richiesta', namePh: 'Il tuo nome', emailPh: 'tu@email.it' },
+    payment: { title: 'Completa il pagamento', total: 'Totale da pagare', cardNumber: 'Numero di carta', expiry: 'Scadenza', secure: 'Pagamento sicuro · Crittografia SSL', pay: 'Paga', persons: (n: number) => `${n} persona${n > 1 ? 'e' : ''}` },
+    done: { title: 'Pre-prenotazione inviata!', tour: 'Tour:', date: 'Data:', body: 'Ti contatteremo via WhatsApp entro 2 ore per confermare il tuo posto.', close: 'Chiudi' },
+    why: { title: 'Perché viaggiare con noi', sub: "Non siamo un'agenzia di massa. Siamo un team appassionato che crea ogni itinerario come se lo facessimo per noi stessi.", items: [{ title: 'Sempre gruppi piccoli', desc: 'Max 12 persone. Più attenzione, meno caos, esperienza migliore.' }, { title: 'Guide locali certificate', desc: 'Tutte le nostre guide sono autorizzate e hanno anni di esperienza sul campo.' }, { title: 'Momenti imperdibili', desc: 'Arriviamo presto, restiamo di più. Le foto migliori vengono dai nostri tour.' }, { title: 'Prezzi trasparenti', desc: 'Il prezzo include tutto ciò che diciamo. Nessun costo nascosto.' }] },
+    testimonials: { title: 'Cosa dicono i nostri viaggiatori' },
+    contact: { title: 'Pronto a partire?', sub: 'Compila il modulo e ti risponderemo entro 24 ore con tutto ciò di cui hai bisogno.', noPayment: 'Nessun pagamento richiesto ora. Confermiamo il tuo posto via WhatsApp.' },
+    footer: 'Turismo responsabile in Thailandia · Licenza N. 0000',
+  },
+  ru: {
+    nav: { destinations: 'Направления', about: 'О нас', reviews: 'Отзывы', contact: 'Контакты', cta: 'Забронировать' },
+    hero: { badge: 'Туры в малых группах · Чиангмай, Таиланд', title1: 'Откройте Чиангмай', title2: 'как местный', sub: 'Опытные гиды. Маленькие группы. Впечатления, которые вы не забудете никогда.', btn1: 'Смотреть туры', btn2: 'Как это работает' },
+    stats: [{ n: '+800', label: 'Довольных путешественников' }, { n: '8', label: 'Уникальных туров' }, { n: '10 лет', label: 'Опыта' }, { n: '4.9 ★', label: 'Средняя оценка' }],
+    tours: { title: 'Наши туры', sub: 'Плановые отправления круглый год. Макс. 12 человек в группе.', difficulty: 'Сложность', includes: 'Включено', pickDate: 'Выберите дату', spots: 'мест', fewSpots: 'Осталось только {n}!', from: 'от', perPerson: 'с человека', nextDates: 'Ближайшие даты:', details: 'Подробнее', easy: 'Лёгкий', moderate: 'Средний', chooseTour: 'Выберите тур...', notSure: 'Ещё не знаю' },
+    modal: { people: 'Количество человек', total: 'Итого', reserve: 'Предварительно забронировать', selectFirst: 'Выберите дату для продолжения', back: 'Назад' },
+    form: { name: 'Полное имя', whatsapp: 'WhatsApp / Телефон', email: 'Эл. почта', dest: 'Какой тур вас интересует?', msg: 'Сообщение (необязательно)', msgPlaceholder: 'Вопросы или особые пожелания?', submit: 'Отправить запрос', namePh: 'Ваше имя', emailPh: 'vy@email.com' },
+    payment: { title: 'Завершите оплату', total: 'Сумма к оплате', cardNumber: 'Номер карты', expiry: 'Срок действия', secure: 'Безопасная оплата · SSL-шифрование', pay: 'Оплатить', persons: (n: number) => `${n} чел.` },
+    done: { title: 'Предзаказ отправлен!', tour: 'Тур:', date: 'Дата:', body: 'Мы свяжемся с вами через WhatsApp в течение 2 часов для подтверждения места.', close: 'Закрыть' },
+    why: { title: 'Почему выбирают нас', sub: 'Мы не массовое агентство. Мы команда увлечённых гидов, которые создают каждый маршрут так, будто едут сами.', items: [{ title: 'Только малые группы', desc: 'Макс. 12 человек. Больше внимания, меньше суеты, лучше впечатления.' }, { title: 'Сертифицированные местные гиды', desc: 'Все наши гиды лицензированы и имеют многолетний опыт работы.' }, { title: 'Незабываемые моменты', desc: 'Мы приезжаем раньше, уходим позже. Лучшие фото — с наших туров.' }, { title: 'Прозрачные цены', desc: 'Цена включает всё, что мы обещаем. Никаких скрытых платежей.' }] },
+    testimonials: { title: 'Что говорят наши путешественники' },
+    contact: { title: 'Готовы отправиться?', sub: 'Заполните форму и мы ответим в течение 24 часов со всей необходимой информацией.', noPayment: 'Оплата сейчас не требуется. Мы подтверждаем место через WhatsApp.' },
+    footer: 'Ответственный туризм в Таиланде · Лицензия № 0000',
+  },
+  zh: {
+    nav: { destinations: '目的地', about: '关于我们', reviews: '评价', contact: '联系我们', cta: '立即预订' },
+    hero: { badge: '小团游 · 泰国清迈', title1: '探索清迈', title2: '像当地人一样', sub: '专业向导。小团游。永生难忘的体验。', btn1: '探索行程', btn2: '如何运作' },
+    stats: [{ n: '+800', label: '满意旅客' }, { n: '8', label: '精选行程' }, { n: '10年', label: '丰富经验' }, { n: '4.9 ★', label: '平均评分' }],
+    tours: { title: '我们的行程', sub: '全年定期出发。每组最多12人。', difficulty: '难度', includes: '包含', pickDate: '选择日期', spots: '名额', fewSpots: '仅剩{n}个名额！', from: '起价', perPerson: '每人', nextDates: '近期出发:', details: '查看详情', easy: '轻松', moderate: '中等', chooseTour: '选择行程...', notSure: '还不确定' },
+    modal: { people: '人数', total: '总计', reserve: '预订此行程', selectFirst: '请先选择日期', back: '返回' },
+    form: { name: '姓名', whatsapp: 'WhatsApp / 电话', email: '电子邮件', dest: '您对哪个行程感兴趣?', msg: '留言（可选）', msgPlaceholder: '有任何问题或特殊需求?', submit: '发送咨询', namePh: '您的姓名', emailPh: 'ni@email.com' },
+    payment: { title: '完成付款', total: '应付总额', cardNumber: '卡号', expiry: '有效期', secure: '安全支付 · SSL加密', pay: '立即支付', persons: (n: number) => `${n}人` },
+    done: { title: '预订已发送！', tour: '行程：', date: '日期：', body: '我们将在2小时内通过WhatsApp与您联系以确认名额。', close: '关闭' },
+    why: { title: '为什么选择我们', sub: '我们不是大众旅行社。我们是一支充满热情的导游团队，每条路线都像是为自己设计的。', items: [{ title: '始终小团游', desc: '最多12人。更多关注，更少噪音，更好的体验。' }, { title: '持证本地导游', desc: '我们所有导游都持有执照并拥有多年实地经验。' }, { title: '难忘的瞬间', desc: '我们早到晚走。最好的照片来自我们的行程。' }, { title: '透明定价', desc: '价格包含我们承诺的一切。从不收取隐藏费用。' }] },
+    testimonials: { title: '旅客的评价' },
+    contact: { title: '准备出发了吗?', sub: '填写表格，我们将在24小时内回复您所需的一切信息。', noPayment: '现在无需付款。我们通过WhatsApp确认您的名额。' },
+    footer: '泰国负责任旅游 · 许可证编号 0000',
+  },
+  ja: {
+    nav: { destinations: '目的地', about: '私たちについて', reviews: 'レビュー', contact: 'お問い合わせ', cta: '予約する' },
+    hero: { badge: '少人数ツアー · タイ・チェンマイ', title1: 'チェンマイを発見しよう', title2: '地元の人のように', sub: '経験豊富なガイド。少人数グループ。一生忘れられない体験。', btn1: 'ツアーを探す', btn2: '仕組みを知る' },
+    stats: [{ n: '+800', label: '満足したお客様' }, { n: '8', label: '厳選ツアー' }, { n: '10年', label: '豊富な経験' }, { n: '4.9 ★', label: '平均評価' }],
+    tours: { title: '私たちのツアー', sub: '年間を通じて定期出発。1グループ最大12名。', difficulty: '難易度', includes: '含まれるもの', pickDate: '日付を選択', spots: '空き', fewSpots: '残り{n}席！', from: '料金', perPerson: '1名', nextDates: '次回出発:', details: '詳細を見る', easy: '簡単', moderate: '普通', chooseTour: 'ツアーを選択...', notSure: 'まだ決まっていません' },
+    modal: { people: '人数', total: '合計', reserve: 'このツアーを仮予約', selectFirst: '続けるには日付を選択してください', back: '戻る' },
+    form: { name: '氏名', whatsapp: 'WhatsApp / 電話番号', email: 'メールアドレス', dest: 'どのツアーに興味がありますか?', msg: 'メッセージ（任意）', msgPlaceholder: 'ご質問や特別なご要望はありますか?', submit: 'お問い合わせを送る', namePh: 'お名前', emailPh: 'anata@email.com' },
+    payment: { title: 'お支払いを完了する', total: 'お支払い合計', cardNumber: 'カード番号', expiry: '有効期限', secure: '安全な支払い · SSL暗号化', pay: '支払う', persons: (n: number) => `${n}名` },
+    done: { title: '仮予約を送信しました！', tour: 'ツアー：', date: '日付：', body: '2時間以内にWhatsAppでご連絡し、お席を確認いたします。', close: '閉じる' },
+    why: { title: '私たちと旅する理由', sub: '私たちは大手旅行会社ではありません。情熱的なガイドのチームが、まるで自分たちが旅するかのように一つひとつの旅程を作り上げています。', items: [{ title: '常に少人数グループ', desc: '最大12名。より多くの配慮、より少ない混雑、より良い体験。' }, { title: '認定地元ガイド', desc: '全てのガイドはライセンスを持ち、現場での豊富な経験があります。' }, { title: '忘れられない瞬間', desc: '早く到着し、長く滞在。最高の写真は私たちのツアーから生まれます。' }, { title: '透明な料金', desc: '料金には私たちが約束するすべてが含まれています。隠れた費用は一切ありません。' }] },
+    testimonials: { title: '旅行者の声' },
+    contact: { title: '出発の準備はできましたか?', sub: 'フォームに記入していただければ、24時間以内に必要な情報をお送りします。', noPayment: '今すぐお支払いは不要です。WhatsAppでお席を確認いたします。' },
+    footer: 'タイでの責任ある旅行 · 許可番号 0000',
+  },
+  ko: {
+    nav: { destinations: '여행지', about: '소개', reviews: '후기', contact: '문의', cta: '예약하기' },
+    hero: { badge: '소규모 투어 · 태국 치앙마이', title1: '치앙마이를 발견하세요', title2: '현지인처럼', sub: '전문 가이드. 소규모 그룹. 절대 잊을 수 없는 경험.', btn1: '투어 둘러보기', btn2: '이용 방법' },
+    stats: [{ n: '+800', label: '만족한 여행자' }, { n: '8', label: '엄선된 투어' }, { n: '10년', label: '풍부한 경험' }, { n: '4.9 ★', label: '평균 평점' }],
+    tours: { title: '투어 소개', sub: '연중 정기 출발. 그룹당 최대 12명.', difficulty: '난이도', includes: '포함 사항', pickDate: '날짜 선택', spots: '자리', fewSpots: '{n}자리 남음!', from: '시작가', perPerson: '1인', nextDates: '다음 출발:', details: '자세히 보기', easy: '쉬움', moderate: '보통', chooseTour: '투어 선택...', notSure: '아직 모르겠어요' },
+    modal: { people: '인원 수', total: '합계', reserve: '이 투어 예약하기', selectFirst: '계속하려면 날짜를 선택하세요', back: '뒤로' },
+    form: { name: '이름', whatsapp: 'WhatsApp / 전화번호', email: '이메일', dest: '어떤 투어에 관심이 있으신가요?', msg: '메시지 (선택)', msgPlaceholder: '질문이나 특별한 요청이 있으신가요?', submit: '문의 보내기', namePh: '성함', emailPh: 'you@email.com' },
+    payment: { title: '결제를 완료하세요', total: '결제 금액', cardNumber: '카드 번호', expiry: '유효기간', secure: '안전한 결제 · SSL 암호화', pay: '결제하기', persons: (n: number) => `${n}명` },
+    done: { title: '예약 신청 완료!', tour: '투어:', date: '날짜:', body: '2시간 이내에 WhatsApp으로 연락하여 자리를 확인해 드리겠습니다.', close: '닫기' },
+    why: { title: '왜 우리와 함께 여행하나요', sub: '우리는 대형 여행사가 아닙니다. 마치 직접 여행하는 것처럼 모든 여정을 정성껏 만드는 열정적인 가이드 팀입니다.', items: [{ title: '항상 소규모 그룹', desc: '최대 12명. 더 많은 관심, 더 적은 소음, 더 나은 경험.' }, { title: '공인 현지 가이드', desc: '모든 가이드는 자격증을 보유하고 현장 경험이 풍부합니다.' }, { title: '놓칠 수 없는 순간', desc: '일찍 도착하고 오래 머뭅니다. 최고의 사진은 우리 투어에서 나옵니다.' }, { title: '투명한 가격', desc: '가격에는 약속한 모든 것이 포함됩니다. 숨겨진 비용은 없습니다.' }] },
+    testimonials: { title: '여행자들의 후기' },
+    contact: { title: '출발 준비가 되셨나요?', sub: '양식을 작성해 주시면 24시간 이내에 필요한 모든 정보를 알려드리겠습니다.', noPayment: '지금 결제할 필요 없습니다. WhatsApp으로 자리를 확인해 드립니다.' },
+    footer: '태국의 책임 있는 관광 · 허가 번호 0000',
+  },
+  th: {
+    nav: { destinations: 'จุดหมาย', about: 'เกี่ยวกับเรา', reviews: 'รีวิว', contact: 'ติดต่อ', cta: 'จองเลย' },
+    hero: { badge: 'ทัวร์กลุ่มเล็ก · เชียงใหม่ ประเทศไทย', title1: 'ค้นพบเชียงใหม่', title2: 'แบบคนท้องถิ่น', sub: 'ไกด์ผู้เชี่ยวชาญ กลุ่มเล็ก ประสบการณ์ที่คุณจะไม่มีวันลืม', btn1: 'สำรวจทัวร์', btn2: 'วิธีการทำงาน' },
+    stats: [{ n: '+800', label: 'นักท่องเที่ยวที่พึงพอใจ' }, { n: '8', label: 'ทัวร์คัดสรร' }, { n: '10 ปี', label: 'ประสบการณ์' }, { n: '4.9 ★', label: 'คะแนนเฉลี่ย' }],
+    tours: { title: 'ทัวร์ของเรา', sub: 'ออกเดินทางตลอดปี สูงสุด 12 คนต่อกลุ่ม', difficulty: 'ความยาก', includes: 'รวมอยู่แล้ว', pickDate: 'เลือกวันที่', spots: 'ที่นั่ง', fewSpots: 'เหลือเพียง {n} ที่!', from: 'เริ่มต้น', perPerson: 'ต่อคน', nextDates: 'วันออกเดินทางถัดไป:', details: 'ดูรายละเอียด', easy: 'ง่าย', moderate: 'ปานกลาง', chooseTour: 'เลือกทัวร์...', notSure: 'ยังไม่แน่ใจ' },
+    modal: { people: 'จำนวนคน', total: 'รวมทั้งหมด', reserve: 'จองทัวร์นี้ล่วงหน้า', selectFirst: 'กรุณาเลือกวันที่ก่อนดำเนินการต่อ', back: 'กลับ' },
+    form: { name: 'ชื่อ-นามสกุล', whatsapp: 'WhatsApp / โทรศัพท์', email: 'อีเมล', dest: 'คุณสนใจทัวร์ไหน?', msg: 'ข้อความ (ไม่บังคับ)', msgPlaceholder: 'มีคำถามหรือความต้องการพิเศษ?', submit: 'ส่งคำถาม', namePh: 'ชื่อของคุณ', emailPh: 'khun@email.com' },
+    payment: { title: 'ชำระเงิน', total: 'ยอดชำระ', cardNumber: 'หมายเลขบัตร', expiry: 'วันหมดอายุ', secure: 'การชำระเงินที่ปลอดภัย · เข้ารหัส SSL', pay: 'ชำระเงิน', persons: (n: number) => `${n} คน` },
+    done: { title: 'ส่งการจองล่วงหน้าแล้ว!', tour: 'ทัวร์:', date: 'วันที่:', body: 'เราจะติดต่อคุณผ่าน WhatsApp ภายใน 2 ชั่วโมงเพื่อยืนยันที่นั่ง', close: 'ปิด' },
+    why: { title: 'ทำไมต้องเดินทางกับเรา', sub: 'เราไม่ใช่บริษัทนำเที่ยวแบบมวลชน เราคือทีมไกด์ที่มีความหลงใหล ที่ออกแบบทุกเส้นทางราวกับว่าเราเองกำลังเดินทาง', items: [{ title: 'กลุ่มเล็กเสมอ', desc: 'สูงสุด 12 คน ใส่ใจมากขึ้น เสียงรบกวนน้อยลง ประสบการณ์ดีขึ้น' }, { title: 'ไกด์ท้องถิ่นที่มีใบรับรอง', desc: 'ไกด์ทุกคนมีใบอนุญาตและมีประสบการณ์ภาคสนามหลายปี' }, { title: 'ช่วงเวลาที่ไม่ควรพลาด', desc: 'เราไปถึงก่อนและอยู่นานขึ้น ภาพถ่ายที่ดีที่สุดมาจากทัวร์ของเรา' }, { title: 'ราคาโปร่งใส', desc: 'ราคารวมทุกอย่างที่เราบอก ไม่มีค่าใช้จ่ายซ่อนเร้น' }] },
+    testimonials: { title: 'สิ่งที่นักท่องเที่ยวของเราพูด' },
+    contact: { title: 'พร้อมออกเดินทางแล้วหรือยัง?', sub: 'กรอกแบบฟอร์มแล้วเราจะตอบกลับภายใน 24 ชั่วโมงพร้อมข้อมูลทั้งหมดที่คุณต้องการ', noPayment: 'ไม่ต้องชำระเงินตอนนี้ เราจะยืนยันที่นั่งผ่าน WhatsApp' },
+    footer: 'การท่องเที่ยวอย่างรับผิดชอบในประเทศไทย · ใบอนุญาตเลขที่ 0000',
   },
 }
 
@@ -86,16 +158,16 @@ const i18n = {
 const tours = [
   {
     id: 1,
-    name: { en: 'Elephant Sanctuary Experience', es: 'Santuario de Elefantes' },
+    name: { en: 'Elephant Sanctuary Experience', es: 'Santuario de Elefantes', de: 'Elefanten-Schutzgebiet', pt: 'Santuário de Elefantes', it: 'Santuario degli Elefanti', ru: 'Слоновый заповедник', zh: '大象保护区体验', ja: 'エレファントサンクチュアリ体験', ko: '코끼리 보호구역 체험', th: 'ประสบการณ์เขตรักษาพันธุ์ช้าง' },
     location: 'Mae Taeng Valley',
-    duration: { en: '1 day', es: '1 día' },
+    duration: { en: '1 day', es: '1 día', de: '1 Tag', pt: '1 dia', it: '1 giorno', ru: '1 день', zh: '1天', ja: '1日', ko: '1일', th: '1 วัน' },
     groupSize: 'Max 10',
     difficulty: 'easy',
     rating: 5.0,
     reviews: 214,
     price: 89,
     currency: 'USD',
-    badge: { en: 'Most booked', es: 'Más elegido' },
+    badge: { en: 'Most booked', es: 'Más elegido', de: 'Beliebteste', pt: 'Mais reservado', it: 'Più prenotato', ru: 'Самый популярный', zh: '最受欢迎', ja: '最人気', ko: '가장 인기', th: 'จองมากที่สุด' },
     badgeColor: 'bg-amber-500',
     description: {
       en: 'Spend a full day caring for rescued elephants in an ethical sanctuary. Feed, bathe, and walk alongside these gentle giants — no riding, no shows, just pure connection.',
@@ -122,16 +194,16 @@ const tours = [
   },
   {
     id: 2,
-    name: { en: 'Doi Inthanon Summit Trek', es: 'Trek al Doi Inthanon' },
+    name: { en: 'Doi Inthanon Summit Trek', es: 'Trek al Doi Inthanon', de: 'Doi-Inthanon-Gipfelwanderung', pt: 'Trilha ao Doi Inthanon', it: 'Trekking al Doi Inthanon', ru: 'Треккинг на Дой Интханон', zh: '因他侬山顶徒步', ja: 'ドイインタノン山頂トレッキング', ko: '도이 인타논 정상 트레킹', th: 'เดินป่าสู่ยอดดอยอินทนนท์' },
     location: 'Doi Inthanon National Park',
-    duration: { en: '1 day', es: '1 día' },
+    duration: { en: '1 day', es: '1 día', de: '1 Tag', pt: '1 dia', it: '1 giorno', ru: '1 день', zh: '1天', ja: '1日', ko: '1일', th: '1 วัน' },
     groupSize: 'Max 12',
     difficulty: 'moderate',
     rating: 4.9,
     reviews: 98,
     price: 75,
     currency: 'USD',
-    badge: { en: "Thailand's roof", es: 'El techo de Tailandia' },
+    badge: { en: "Thailand's roof", es: 'El techo de Tailandia', de: 'Dach Thailands', pt: 'O teto da Tailândia', it: 'Il tetto della Thailandia', ru: 'Крыша Таиланда', zh: '泰国屋脊', ja: 'タイの屋根', ko: '태국의 지붕', th: 'หลังคาแห่งประเทศไทย' },
     badgeColor: 'bg-teal-600',
     description: {
       en: "Hike to the highest point in Thailand through misty cloud forests, hidden waterfalls and Hmong hill tribe villages. A world away from the city heat.",
@@ -158,16 +230,16 @@ const tours = [
   },
   {
     id: 3,
-    name: { en: 'Chiang Rai & White Temple', es: 'Chiang Rai y el Templo Blanco' },
+    name: { en: 'Chiang Rai & White Temple', es: 'Chiang Rai y el Templo Blanco', de: 'Chiang Rai & Weißer Tempel', pt: 'Chiang Rai e o Templo Branco', it: 'Chiang Rai e il Tempio Bianco', ru: 'Чиангpaй и Белый Храм', zh: '清莱与白庙', ja: 'チェンライと白い寺院', ko: '치앙라이와 하얀 사원', th: 'เชียงรายและวัดร่องขุ่น' },
     location: 'Chiang Rai Province',
-    duration: { en: 'Full day trip', es: 'Excursión de día completo' },
+    duration: { en: 'Full day trip', es: 'Excursión de día completo', de: 'Ganztagesausflug', pt: 'Excursão de dia inteiro', it: 'Gita di un giorno intero', ru: 'Однодневная поездка', zh: '全天游览', ja: '終日の旅行', ko: '하루 종일 여행', th: 'ทริปเต็มวัน' },
     groupSize: 'Max 12',
     difficulty: 'easy',
     rating: 4.9,
     reviews: 143,
     price: 69,
     currency: 'USD',
-    badge: { en: 'Iconic', es: 'Icónico' },
+    badge: { en: 'Iconic', es: 'Icónico', de: 'Ikonisch', pt: 'Icônico', it: 'Iconico', ru: 'Культовое', zh: '标志性', ja: '象徴的', ko: '상징적', th: 'สัญลักษณ์' },
     badgeColor: 'bg-rose-500',
     description: {
       en: 'Visit the surreal White Temple (Wat Rong Khun), the golden Blue Temple, the Black House museum and a hilltribe village — all in one unforgettable day from Chiang Mai.',
@@ -194,16 +266,16 @@ const tours = [
   },
   {
     id: 4,
-    name: { en: 'Thai Cooking & Night Bazaar', es: 'Cocina Tailandesa y Bazar Nocturno' },
+    name: { en: 'Thai Cooking & Night Bazaar', es: 'Cocina Tailandesa y Bazar Nocturno', de: 'Thai-Kochen & Nachtbasar', pt: 'Culinária Tailandesa e Bazar Noturno', it: 'Cucina Thailandese e Bazar Notturno', ru: 'Тайская кухня и Ночной базар', zh: '泰式烹饪与夜市', ja: 'タイ料理とナイトバザール', ko: '태국 요리와 야시장', th: 'อาหารไทยและตลาดกลางคืน' },
     location: 'Chiang Mai Old City',
-    duration: { en: 'Half day + evening', es: 'Tarde + noche' },
+    duration: { en: 'Half day + evening', es: 'Tarde + noche', de: 'Halber Tag + Abend', pt: 'Meio dia + noite', it: 'Mezza giornata + serata', ru: 'Полдня + вечер', zh: '半天+晚上', ja: '半日＋夜', ko: '반나절 + 저녁', th: 'ครึ่งวัน + เย็น' },
     groupSize: 'Max 8',
     difficulty: 'easy',
     rating: 4.8,
     reviews: 177,
     price: 55,
     currency: 'USD',
-    badge: { en: 'Best for foodies', es: 'Para los amantes de la comida' },
+    badge: { en: 'Best for foodies', es: 'Para los amantes de la comida', de: 'Für Feinschmecker', pt: 'Para amantes da gastronomia', it: 'Per gli amanti del cibo', ru: 'Для гурманов', zh: '美食爱好者首选', ja: 'グルメに最適', ko: '미식가를 위한', th: 'สำหรับคนรักอาหาร' },
     badgeColor: 'bg-orange-500',
     description: {
       en: "Learn to cook 5 classic Thai dishes with a local chef, shop at the Warorot fresh market for ingredients, then explore the famous Night Bazaar as the city comes alive.",
@@ -245,12 +317,37 @@ const testimonials = {
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 
-type Lang = 'en' | 'es'
+type Lang = 'en' | 'es' | 'de' | 'pt' | 'it' | 'ru' | 'zh' | 'ja' | 'ko' | 'th'
+
+const LANGS: { code: Lang; label: string; flag: string }[] = [
+  { code: 'en', label: 'English',    flag: '🇬🇧' },
+  { code: 'es', label: 'Español',    flag: '🇪🇸' },
+  { code: 'de', label: 'Deutsch',    flag: '🇩🇪' },
+  { code: 'pt', label: 'Português',  flag: '🇧🇷' },
+  { code: 'it', label: 'Italiano',   flag: '🇮🇹' },
+  { code: 'ru', label: 'Русский',    flag: '🇷🇺' },
+  { code: 'zh', label: '中文',        flag: '🇨🇳' },
+  { code: 'ja', label: '日本語',      flag: '🇯🇵' },
+  { code: 'ko', label: '한국어',      flag: '🇰🇷' },
+  { code: 'th', label: 'ภาษาไทย',    flag: '🇹🇭' },
+]
+
+const DATE_LOCALES: Record<Lang, string> = {
+  en: 'en-GB', es: 'es-AR', de: 'de-DE', pt: 'pt-BR', it: 'it-IT',
+  ru: 'ru-RU', zh: 'zh-CN', ja: 'ja-JP', ko: 'ko-KR', th: 'th-TH',
+}
+
+function getL(obj: Partial<Record<Lang, string>>, lang: Lang): string {
+  return obj[lang] ?? obj.en ?? ''
+}
+function getLArr(obj: Partial<Record<Lang, string[]>>, lang: Lang): string[] {
+  return obj[lang] ?? obj.en ?? []
+}
 
 function formatDate(dateStr: string, lang: Lang) {
   const [y, m, d] = dateStr.split('-').map(Number)
   const date = new Date(y, m - 1, d)
-  return date.toLocaleDateString(lang === 'en' ? 'en-GB' : 'es-AR', { weekday: 'short', day: 'numeric', month: 'long' })
+  return date.toLocaleDateString(DATE_LOCALES[lang], { weekday: 'short', day: 'numeric', month: 'long' })
 }
 
 function formatPrice(p: number, currency: string) {
@@ -336,7 +433,7 @@ export default function ToursPage() {
                 style={{ borderColor: '#E8862A', color: '#E8862A', background: 'rgba(232,134,42,0.08)' }}
               >
                 <Globe size={14} />
-                {lang === 'en' ? 'EN' : 'ES'}
+                {lang.toUpperCase()}
                 <ChevronDown size={12} className={`transition-transform ${langOpen ? 'rotate-180' : ''}`} />
               </button>
               <AnimatePresence>
@@ -346,17 +443,17 @@ export default function ToursPage() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -8 }}
                     className="absolute right-0 mt-2 rounded-xl overflow-hidden shadow-xl border"
-                    style={{ background: '#FDF7EE', borderColor: 'rgba(232,134,42,0.2)', minWidth: 120 }}
+                    style={{ background: '#FDF7EE', borderColor: 'rgba(232,134,42,0.2)', minWidth: 150, maxHeight: 340, overflowY: 'auto' }}
                   >
-                    {(['en', 'es'] as Lang[]).map(l => (
+                    {LANGS.map(l => (
                       <button
-                        key={l}
-                        onClick={() => { setLang(l); setLangOpen(false) }}
+                        key={l.code}
+                        onClick={() => { setLang(l.code); setLangOpen(false) }}
                         className="w-full flex items-center justify-between px-4 py-2.5 text-sm hover:bg-amber-50 transition-colors"
-                        style={{ color: lang === l ? '#E8862A' : '#5C3A1A' }}
+                        style={{ color: lang === l.code ? '#E8862A' : '#5C3A1A' }}
                       >
-                        <span>{l === 'en' ? '🇬🇧 English' : '🇦🇷 Español'}</span>
-                        {lang === l && <Check size={13} />}
+                        <span>{l.flag} {l.label}</span>
+                        {lang === l.code && <Check size={13} />}
                       </button>
                     ))}
                   </motion.div>
@@ -465,12 +562,12 @@ export default function ToursPage() {
                 <div className="relative h-60 overflow-hidden">
                   <img
                     src={tour.images[0]}
-                    alt={tour.name[lang]}
+                    alt={getL(tour.name, lang)}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className={`absolute inset-0 bg-gradient-to-t ${tour.accent}`} />
                   <span className={`absolute top-4 left-4 ${tour.badgeColor} text-white text-xs font-bold px-3 py-1.5 rounded-full`}>
-                    {tour.badge[lang]}
+                    {getL(tour.badge, lang)}
                   </span>
                   <div className="absolute bottom-4 right-4 text-right">
                     <div className="text-xs text-white/70">{t.tours.from}</div>
@@ -485,12 +582,12 @@ export default function ToursPage() {
                       <div className="flex items-center gap-1.5 text-xs font-medium mb-1" style={{ color: '#E8862A' }}>
                         <MapPin size={12} /> {tour.location}
                       </div>
-                      <h3 className="text-xl font-black leading-tight" style={{ color: '#1A1208' }}>{tour.name[lang]}</h3>
+                      <h3 className="text-xl font-black leading-tight" style={{ color: '#1A1208' }}>{getL(tour.name, lang)}</h3>
                     </div>
                   </div>
-                  <p className="text-sm leading-relaxed mb-4 line-clamp-2" style={{ color: '#7A4E2A' }}>{tour.description[lang]}</p>
+                  <p className="text-sm leading-relaxed mb-4 line-clamp-2" style={{ color: '#7A4E2A' }}>{getL(tour.description, lang)}</p>
                   <div className="flex items-center gap-5 text-sm mb-4" style={{ color: '#A06030' }}>
-                    <span className="flex items-center gap-1.5"><Clock size={13} />{tour.duration[lang]}</span>
+                    <span className="flex items-center gap-1.5"><Clock size={13} />{getL(tour.duration, lang)}</span>
                     <span className="flex items-center gap-1.5"><Users size={13} />{tour.groupSize}</span>
                     <span className="flex items-center gap-1.5"><Star size={13} className="fill-amber-400 text-amber-400" />{tour.rating}</span>
                   </div>
@@ -570,7 +667,7 @@ export default function ToursPage() {
           </div>
           <h2 className="text-4xl font-black text-center mb-16" style={{ color: '#1A1208' }}>{t.testimonials.title}</h2>
           <div className="grid md:grid-cols-3 gap-6">
-            {testimonials[lang].map(t2 => (
+            {(testimonials[lang as keyof typeof testimonials] ?? testimonials.en).map(t2 => (
               <div key={t2.name} className="rounded-2xl p-6" style={{ background: '#fff', border: '1px solid rgba(232,134,42,0.15)', boxShadow: '0 2px 16px rgba(90,40,10,0.06)' }}>
                 <div className="flex gap-1 mb-4">
                   {[...Array(5)].map((_, i) => <Star key={i} size={14} className="fill-amber-400 text-amber-400" />)}
@@ -592,7 +689,7 @@ export default function ToursPage() {
           <h2 className="text-4xl font-black mb-4" style={{ color: '#1A1208' }}>{t.contact.title}</h2>
           <p className="mb-10" style={{ color: '#7A4E2A' }}>{t.contact.sub}</p>
           <form
-            onSubmit={e => { e.preventDefault(); alert(lang === 'en' ? 'Thank you! We\'ll be in touch.' : '¡Gracias! Te contactamos pronto.') }}
+            onSubmit={e => { e.preventDefault(); alert(t.done.title) }}
             className="rounded-3xl p-8 text-left space-y-5"
             style={{ background: '#fff', border: '1px solid rgba(232,134,42,0.18)', boxShadow: '0 4px 32px rgba(90,40,10,0.08)' }}
           >
@@ -613,9 +710,9 @@ export default function ToursPage() {
             <div>
               <label className="text-sm font-medium mb-1.5 block" style={{ color: '#7A4E2A' }}>{t.form.dest}</label>
               <select className="w-full rounded-xl px-4 py-3 text-sm outline-none transition-all" style={{ background: '#FDF7EE', border: '1px solid rgba(232,134,42,0.25)', color: '#1A1208' }} onFocus={e => e.target.style.borderColor = '#E8862A'} onBlur={e => e.target.style.borderColor = 'rgba(232,134,42,0.25)'}>
-                <option value="">{lang === 'en' ? 'Choose a tour...' : 'Elegir tour...'}</option>
-                {tours.map(t2 => <option key={t2.id}>{t2.name[lang]}</option>)}
-                <option>{lang === 'en' ? "I'm not sure yet" : 'No sé todavía'}</option>
+                <option value="">{t.tours.chooseTour}</option>
+                {tours.map(t2 => <option key={t2.id}>{getL(t2.name, lang)}</option>)}
+                <option>{t.tours.notSure}</option>
               </select>
             </div>
             <div>
@@ -666,7 +763,7 @@ export default function ToursPage() {
             >
               {/* Gallery */}
               <div className="relative h-64 md:h-72 overflow-hidden rounded-t-3xl shrink-0">
-                <img src={selectedTour.images[activeImg]} alt={selectedTour.name[lang]} className="w-full h-full object-cover" />
+                <img src={selectedTour.images[activeImg]} alt={getL(selectedTour.name, lang)} className="w-full h-full object-cover" />
                 <div className={`absolute inset-0 bg-gradient-to-t ${selectedTour.accent}`} />
                 <button onClick={closeTour} className="absolute top-4 right-4 w-9 h-9 rounded-full flex items-center justify-center text-white transition-colors" style={{ background: 'rgba(26,18,8,0.5)' }}>
                   <X size={18} />
@@ -693,7 +790,7 @@ export default function ToursPage() {
                   <div className="text-center py-10">
                     <div className="text-5xl mb-4">🎉</div>
                     <h3 className="text-2xl font-black mb-2" style={{ color: '#1A1208' }}>{t.done.title}</h3>
-                    <p style={{ color: '#7A4E2A' }} className="mb-1">{t.done.tour} <strong style={{ color: '#1A1208' }}>{selectedTour.name[lang]}</strong></p>
+                    <p style={{ color: '#7A4E2A' }} className="mb-1">{t.done.tour} <strong style={{ color: '#1A1208' }}>{getL(selectedTour.name, lang)}</strong></p>
                     {selectedDate && <p style={{ color: '#7A4E2A' }} className="mb-6">{t.done.date} <strong style={{ color: '#1A1208' }}>{formatDate(selectedDate, lang)}</strong></p>}
                     <p style={{ color: '#7A4E2A' }} className="mb-8 text-sm">{t.done.body}</p>
                     <button onClick={closeTour} className="font-bold px-8 py-3 rounded-full text-white" style={{ background: '#E8862A' }}>{t.done.close}</button>
@@ -703,22 +800,22 @@ export default function ToursPage() {
                     <button onClick={() => setReservaStep('form')} className="flex items-center gap-1 text-sm mb-5 transition-colors hover:opacity-70" style={{ color: '#E8862A' }}>
                       <ChevronLeft size={15} /> {t.modal.back}
                     </button>
-                    <h3 className="text-xl font-black mb-1" style={{ color: '#1A1208' }}>{lang === 'en' ? 'Complete your payment' : 'Completá tu pago'}</h3>
+                    <h3 className="text-xl font-black mb-1" style={{ color: '#1A1208' }}>{t.payment.title}</h3>
                     <p className="text-sm mb-6" style={{ color: '#7A4E2A' }}>
-                      {selectedTour?.name[lang]} · {selectedDate && formatDate(selectedDate, lang)} · {pax} {lang === 'en' ? `person${pax > 1 ? 's' : ''}` : `persona${pax > 1 ? 's' : ''}`}
+                      {selectedTour && getL(selectedTour.name, lang)} · {selectedDate && formatDate(selectedDate, lang)} · {t.payment.persons(pax)}
                     </p>
                     <div className="rounded-xl p-4 mb-6 flex items-center justify-between" style={{ background: 'rgba(232,134,42,0.08)', border: '1px solid rgba(232,134,42,0.2)' }}>
-                      <span className="font-medium" style={{ color: '#5C3A1A' }}>{lang === 'en' ? 'Total to pay' : 'Total a pagar'}</span>
+                      <span className="font-medium" style={{ color: '#5C3A1A' }}>{t.payment.total}</span>
                       <span className="text-2xl font-black" style={{ color: '#E8862A' }}>{selectedTour && formatPrice(selectedTour.price * pax, selectedTour.currency)}</span>
                     </div>
                     <div className="space-y-3 mb-6">
                       <div>
-                        <label className="text-xs font-semibold mb-1.5 block uppercase tracking-wide" style={{ color: '#7A4E2A' }}>{lang === 'en' ? 'Card number' : 'Número de tarjeta'}</label>
+                        <label className="text-xs font-semibold mb-1.5 block uppercase tracking-wide" style={{ color: '#7A4E2A' }}>{t.payment.cardNumber}</label>
                         <input className="w-full rounded-xl px-4 py-3 text-sm outline-none font-mono" style={{ background: '#fff', border: '1px solid rgba(232,134,42,0.3)', color: '#1A1208' }} placeholder="4242 4242 4242 4242" maxLength={19} />
                       </div>
                       <div className="grid grid-cols-2 gap-3">
                         <div>
-                          <label className="text-xs font-semibold mb-1.5 block uppercase tracking-wide" style={{ color: '#7A4E2A' }}>{lang === 'en' ? 'Expiry' : 'Vencimiento'}</label>
+                          <label className="text-xs font-semibold mb-1.5 block uppercase tracking-wide" style={{ color: '#7A4E2A' }}>{t.payment.expiry}</label>
                           <input className="w-full rounded-xl px-4 py-3 text-sm outline-none font-mono" style={{ background: '#fff', border: '1px solid rgba(232,134,42,0.3)', color: '#1A1208' }} placeholder="MM / YY" maxLength={7} />
                         </div>
                         <div>
@@ -732,11 +829,11 @@ export default function ToursPage() {
                       className="w-full font-bold py-4 rounded-xl text-white text-base transition-all hover:opacity-90"
                       style={{ background: '#E8862A', boxShadow: '0 4px 20px rgba(232,134,42,0.3)' }}
                     >
-                      {lang === 'en' ? `Pay ${selectedTour ? formatPrice(selectedTour.price * pax, selectedTour.currency) : ''}` : `Pagar ${selectedTour ? formatPrice(selectedTour.price * pax, selectedTour.currency) : ''}`}
+                      {t.payment.pay} {selectedTour ? formatPrice(selectedTour.price * pax, selectedTour.currency) : ''}
                     </button>
                     <div className="flex items-center justify-center gap-2 mt-4">
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#A06030" strokeWidth="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-                      <p className="text-xs text-center" style={{ color: '#A06030' }}>{lang === 'en' ? 'Secure payment · SSL encrypted' : 'Pago seguro · Cifrado SSL'}</p>
+                      <p className="text-xs text-center" style={{ color: '#A06030' }}>{t.payment.secure}</p>
                     </div>
                   </div>
                 ) : reservaStep === 'form' ? (
@@ -744,10 +841,10 @@ export default function ToursPage() {
                     <button onClick={() => setReservaStep('browse')} className="flex items-center gap-1 text-sm mb-5 transition-colors hover:opacity-70" style={{ color: '#E8862A' }}>
                       <ChevronLeft size={15} /> {t.modal.back}
                     </button>
-                    <h3 className="text-xl font-black mb-1" style={{ color: '#1A1208' }}>{selectedTour.name[lang]}</h3>
+                    <h3 className="text-xl font-black mb-1" style={{ color: '#1A1208' }}>{getL(selectedTour.name, lang)}</h3>
                     {selectedDate && (
                       <p className="text-sm mb-6" style={{ color: '#7A4E2A' }}>
-                        {formatDate(selectedDate, lang)} · {pax} {lang === 'en' ? `person${pax > 1 ? 's' : ''}` : `persona${pax > 1 ? 's' : ''}`}
+                        {formatDate(selectedDate, lang)} · {t.payment.persons(pax)}
                       </p>
                     )}
                     <form onSubmit={handleFormSubmit} className="space-y-4">
@@ -776,7 +873,7 @@ export default function ToursPage() {
                         <div className="flex items-center gap-1.5 text-xs font-medium mb-1" style={{ color: '#E8862A' }}>
                           <MapPin size={12} /> {selectedTour.location}
                         </div>
-                        <h3 className="text-2xl font-black" style={{ color: '#1A1208' }}>{selectedTour.name[lang]}</h3>
+                        <h3 className="text-2xl font-black" style={{ color: '#1A1208' }}>{getL(selectedTour.name, lang)}</h3>
                       </div>
                       <div className="text-right shrink-0">
                         <div className="text-xs mb-0.5" style={{ color: '#A06030' }}>{t.tours.from}</div>
@@ -785,17 +882,17 @@ export default function ToursPage() {
                       </div>
                     </div>
                     <div className="flex items-center gap-4 text-sm mb-4 flex-wrap" style={{ color: '#A06030' }}>
-                      <span className="flex items-center gap-1.5"><Clock size={13} />{selectedTour.duration[lang]}</span>
+                      <span className="flex items-center gap-1.5"><Clock size={13} />{getL(selectedTour.duration, lang)}</span>
                       <span className="flex items-center gap-1.5"><Users size={13} />{selectedTour.groupSize}</span>
                       <span className="flex items-center gap-1.5"><Star size={13} className="fill-amber-400 text-amber-400" />{selectedTour.rating} ({selectedTour.reviews})</span>
                     </div>
-                    <p className="text-sm leading-relaxed mb-5" style={{ color: '#5C3A1A' }}>{selectedTour.description[lang]}</p>
+                    <p className="text-sm leading-relaxed mb-5" style={{ color: '#5C3A1A' }}>{getL(selectedTour.description, lang)}</p>
 
                     {/* Highlights */}
                     <div className="mb-5">
                       <h4 className="text-xs font-bold uppercase tracking-wider mb-3" style={{ color: '#A06030' }}>{t.tours.includes}</h4>
                       <div className="space-y-2">
-                        {selectedTour.highlights[lang].map(h => (
+                        {getLArr(selectedTour.highlights, lang).map(h => (
                           <div key={h} className="flex items-start gap-2.5 text-sm" style={{ color: '#5C3A1A' }}>
                             <div className="w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5" style={{ background: 'rgba(232,134,42,0.15)' }}>
                               <div className="w-1.5 h-1.5 rounded-full" style={{ background: '#E8862A' }} />
